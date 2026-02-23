@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SUMMIT PT CLINIC – Admin System</title>
+  <title>SUMMIT PT CLINIC – PT Clinic Management System</title>
   <style>
     /* ─── Reset & Base ─────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -516,10 +516,10 @@
       </svg></div>
       <div>
         <h1>SUMMIT PT CLINIC</h1>
-        <span>Hospital / Clinic Admin System</span>
+        <span>PT Clinic Management System</span>
       </div>
     </div>
-    <h2>Admin Sign In</h2>
+    <h2>PT Clinic Sign In</h2>
     <p class="sub">Select your role, then enter your credentials</p>
 
     <div id="login-error-msg" style="display:none;background:#fef2f2;border:1px solid #fecaca;color:#991b1b;padding:11px 14px;border-radius:8px;font-size:13px;margin-bottom:14px;display:none">
@@ -544,10 +544,10 @@
         <input class="input" id="login-pass" type="password" placeholder="••••••••" />
       </div>
       <button class="btn btn-primary full-w" style="padding:11px;font-size:14px;" onclick="doLogin()">
-        Sign In to Hospital Admin →
+        Sign In to PT Clinic →
       </button>
     </div>
-    <div class="login-footer">Hospital / Clinic Admin System &nbsp;·&nbsp; SUMMIT PT CLINIC</div>
+    <div class="login-footer">PT Clinic Management System &nbsp;·&nbsp; SUMMIT PT CLINIC</div>
   </div>
 </div>
 
@@ -610,8 +610,8 @@
           <div class="notif-panel" id="notif-panel">
             <div class="notif-hdr"><strong>Notifications</strong><button class="btn btn-sm btn-outline">Mark all read</button></div>
             <div class="notif-item unread">
-              <span class="ni-icon">🚨</span>
-              <div class="ni-body"><strong>Critical: ICU bed 3 alert</strong><span>2 minutes ago</span></div>
+              <span class="ni-icon">⚠️</span>
+              <div class="ni-body"><strong>Room 3 equipment needs maintenance</strong><span>2 minutes ago</span></div>
             </div>
             <div class="notif-item unread">
               <span class="ni-icon">🧾</span>
@@ -623,11 +623,11 @@
             </div>
             <div class="notif-item">
               <span class="ni-icon">📅</span>
-              <div class="ni-body"><strong>Dr. Patel shift starts at 08:00</strong><span>Today</span></div>
+              <div class="ni-body"><strong>PT Santos shift starts at 08:00</strong><span>Today</span></div>
             </div>
             <div class="notif-item">
-              <span class="ni-icon">💊</span>
-              <div class="ni-body"><strong>Paracetamol stock low (12 units)</strong><span>Yesterday</span></div>
+              <span class="ni-icon">🩹</span>
+              <div class="ni-body"><strong>Resistance bands stock low (8 units)</strong><span>Yesterday</span></div>
             </div>
           </div>
         </div>
@@ -685,26 +685,26 @@
           </div>
           <div class="stat-card warn" data-roles="superadmin,supervisor">
             <div class="stat-icon">🛏️</div>
-            <div class="stat-val">37<span style="font-size:16px;">/60</span></div>
-            <div class="stat-lbl">Beds Occupied</div>
-            <div class="stat-delta" style="color:var(--warn);">61.7% occupancy</div>
+            <div class="stat-val">9<span style="font-size:16px;">/12</span></div>
+            <div class="stat-lbl">Rooms Active</div>
+            <div class="stat-delta" style="color:var(--warn);">75% utilization</div>
           </div>
           <div class="stat-card red" data-roles="superadmin,supervisor">
             <div class="stat-icon">🚨</div>
             <div class="stat-val">5</div>
-            <div class="stat-lbl">Emergency Cases</div>
-            <div class="stat-delta delta-dn">↑ 2 new today</div>
+            <div class="stat-lbl">New Referrals</div>
+            <div class="stat-delta delta-up">↑ 2 this week</div>
           </div>
           <!-- Super Admin + HR Admin + Supervisor: Staff overview -->
           <div class="stat-card blue" data-roles="superadmin,hradmin,supervisor">
             <div class="stat-icon">👨‍⚕️</div>
-            <div class="stat-val">24</div>
+            <div class="stat-val">12</div>
             <div class="stat-lbl">Therapists On Duty</div>
             <div class="stat-delta delta-up">↑ 3 on call</div>
           </div>
           <div class="stat-card green" data-roles="superadmin,hradmin">
             <div class="stat-icon">👥</div>
-            <div class="stat-val">58</div>
+            <div class="stat-val">24</div>
             <div class="stat-lbl">Total Staff</div>
             <div class="stat-delta delta-up">↑ 2 new this week</div>
           </div>
@@ -771,68 +771,68 @@
             <div class="appt-slot">
               <div class="appt-time">08:00</div>
               <div class="avatar" style="background:#8b5cf6;">RM</div>
-              <div class="appt-info"><strong>Robert Mills</strong><span>Dr. Patel · Cardiology</span></div>
+              <div class="appt-info"><strong>Robert Mills</strong><span>PT Santos · Manual Therapy</span></div>
               <span class="badge badge-green">Confirmed</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">08:30</div>
               <div class="avatar" style="background:#ec4899;">SK</div>
-              <div class="appt-info"><strong>Sara Kim</strong><span>Dr. Chen · Neurology</span></div>
+              <div class="appt-info"><strong>Sara Kim</strong><span>PT Cruz · Sports Rehab</span></div>
               <span class="badge badge-yellow">Waiting</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">09:00</div>
               <div class="avatar" style="background:#f59e0b;">TW</div>
-              <div class="appt-info"><strong>Tom Wilson</strong><span>Dr. Lena · Ortho.</span></div>
-              <span class="badge badge-blue">In Progress</span>
+              <div class="appt-info"><strong>Tom Wilson</strong><span>PT Lena · Post-Surgical Rehab</span></div>
+              <span class="badge badge-blue">In Session</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">10:15</div>
               <div class="avatar" style="background:#10b981;">AB</div>
-              <div class="appt-info"><strong>Alice Brown</strong><span>Dr. Patel · Cardiology</span></div>
+              <div class="appt-info"><strong>Alice Brown</strong><span>PT Santos · Manual Therapy</span></div>
               <span class="badge badge-gray">Scheduled</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">11:00</div>
               <div class="avatar" style="background:#ef4444;">JD</div>
-              <div class="appt-info"><strong>James Doe</strong><span>Dr. Smith · Pediatrics</span></div>
+              <div class="appt-info"><strong>James Doe</strong><span>PT Reyes · Neurological PT</span></div>
               <span class="badge badge-red">Cancelled</span>
             </div>
           </div>
 
-          <!-- Bed Occupancy -->
+          <!-- Treatment Room Utilization -->
           <div class="card">
-            <div class="card-title">Bed Occupancy by Ward</div>
+            <div class="card-title">Treatment Room Utilization</div>
             <div style="display:flex;flex-direction:column;gap:14px;">
               <div>
                 <div class="flex justify-between text-sm" style="margin-bottom:5px;">
-                  <span>General Ward</span><span class="bold">22/30</span>
+                  <span>Manual Therapy</span><span class="bold">3/3</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width:73%;background:var(--accent);"></div></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--accent);"></div></div>
               </div>
               <div>
                 <div class="flex justify-between text-sm" style="margin-bottom:5px;">
-                  <span>ICU</span><span class="bold" style="color:var(--danger);">8/10</span>
+                  <span>Sports Rehab</span><span class="bold">2/3</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width:80%;background:var(--danger);"></div></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:67%;background:var(--ok);"></div></div>
               </div>
               <div>
                 <div class="flex justify-between text-sm" style="margin-bottom:5px;">
-                  <span>Paediatrics</span><span class="bold">5/12</span>
+                  <span>Post-Surgical Rehab</span><span class="bold">2/3</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width:42%;background:var(--ok);"></div></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:67%;background:var(--ok);"></div></div>
               </div>
               <div>
                 <div class="flex justify-between text-sm" style="margin-bottom:5px;">
-                  <span>Maternity</span><span class="bold">4/8</span>
+                  <span>Neurological PT</span><span class="bold">1/2</span>
                 </div>
                 <div class="progress-bar"><div class="progress-fill" style="width:50%;background:#8b5cf6;"></div></div>
               </div>
               <div>
                 <div class="flex justify-between text-sm" style="margin-bottom:5px;">
-                  <span>Emergency</span><span class="bold" style="color:var(--warn);">5/6</span>
+                  <span>Orthopaedic PT</span><span class="bold">1/1</span>
                 </div>
-                <div class="progress-bar"><div class="progress-fill" style="width:83%;background:var(--warn);"></div></div>
+                <div class="progress-bar"><div class="progress-fill" style="width:100%;background:var(--warn);"></div></div>
               </div>
             </div>
           </div>
@@ -862,27 +862,27 @@
             <div class="card-title">Recent Activity</div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--ok);"></div>
-              <div><div class="act-text"><strong>Patient admitted</strong> – Emily Carter, Ward B-12</div><div class="act-time">5 min ago</div></div>
+              <div><div class="act-text"><strong>Session completed</strong> – Emily Carter, Manual Therapy Rm 2</div><div class="act-time">5 min ago</div></div>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--accent);"></div>
-              <div><div class="act-text"><strong>Appointment booked</strong> – John Doe with Dr. Patel</div><div class="act-time">18 min ago</div></div>
-            </div>
-            <div class="activity-item">
-              <div class="act-dot" style="background:var(--danger);"></div>
-              <div><div class="act-text"><strong>Emergency alert</strong> – ICU Patient #0032 critical</div><div class="act-time">32 min ago</div></div>
+              <div><div class="act-text"><strong>Appointment booked</strong> – John Doe with PT Santos</div><div class="act-time">18 min ago</div></div>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--warn);"></div>
-              <div><div class="act-text"><strong>Invoice overdue</strong> – Invoice #1042 – $3,400</div><div class="act-time">1 hr ago</div></div>
+              <div><div class="act-text"><strong>New referral received</strong> – Patient #P-0032 from ORTHO clinic</div><div class="act-time">32 min ago</div></div>
+            </div>
+            <div class="activity-item">
+              <div class="act-dot" style="background:var(--warn);"></div>
+              <div><div class="act-text"><strong>Invoice overdue</strong> – Invoice #1042 – $1,200</div><div class="act-time">1 hr ago</div></div>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--ok);"></div>
-              <div><div class="act-text"><strong>Patient discharged</strong> – Michael Lee, Room 204</div><div class="act-time">2 hr ago</div></div>
+              <div><div class="act-text"><strong>Patient discharged</strong> – Michael Lee, completed program</div><div class="act-time">2 hr ago</div></div>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:#8b5cf6;"></div>
-              <div><div class="act-text"><strong>New staff added</strong> – Nurse Angela Brown</div><div class="act-time">3 hr ago</div></div>
+              <div><div class="act-text"><strong>New staff added</strong> – PT Aide Angela Brown</div><div class="act-time">3 hr ago</div></div>
             </div>
           </div>
         </div>
@@ -901,8 +901,8 @@
         <div class="card" style="margin-bottom:18px;">
           <div class="flex gap-2 wrap">
             <input class="input" style="max-width:280px;" placeholder="🔍 Search patient name, ID…" />
-            <select class="select" style="max-width:160px;"><option>All Status</option><option>Admitted</option><option>OPD</option><option>Discharged</option></select>
-            <select class="select" style="max-width:160px;"><option>All Wards</option><option>General</option><option>ICU</option><option>Paediatrics</option></select>
+            <select class="select" style="max-width:160px;"><option>All Status</option><option>Active</option><option>On Hold</option><option>Discharged</option></select>
+            <select class="select" style="max-width:180px;"><option>All PT Services</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option></select>
             <button class="btn btn-outline btn-sm">🔽 Filter</button>
           </div>
         </div>
@@ -911,42 +911,42 @@
           <div class="tbl-wrap">
             <table>
               <thead>
-                <tr><th>Patient</th><th>ID</th><th>Age/Sex</th><th>Diagnosis</th><th>Ward</th><th>Doctor</th><th>Status</th><th>Actions</th></tr>
+                <tr><th>Patient</th><th>ID</th><th>Age/Sex</th><th>Diagnosis</th><th>PT Service</th><th>Therapist</th><th>Status</th><th>Actions</th></tr>
               </thead>
               <tbody>
                 <tr>
                   <td><div class="flex items-center gap-2"><div class="avatar" style="background:#3b82f6;">RC</div><div><div class="bold">Robert Cole</div><div class="text-sm text-muted">robert@email.com</div></div></div></td>
                   <td class="text-muted">#P-1042</td><td>45 / M</td>
-                  <td>Hypertension</td><td>General B</td><td>Dr. Patel</td>
-                  <td><span class="badge badge-blue">Admitted</span></td>
+                  <td>Low Back Pain</td><td>Manual Therapy</td><td>PT Santos</td>
+                  <td><span class="badge badge-blue">Active</span></td>
                   <td><div class="flex gap-1"><button class="btn btn-sm btn-outline" onclick="navigate('records',null)">View</button><button class="btn btn-sm btn-primary">Edit</button></div></td>
                 </tr>
                 <tr>
                   <td><div class="flex items-center gap-2"><div class="avatar" style="background:#ec4899;">SK</div><div><div class="bold">Sara Kim</div><div class="text-sm text-muted">sara.k@email.com</div></div></div></td>
                   <td class="text-muted">#P-1041</td><td>32 / F</td>
-                  <td>Migraine</td><td>OPD</td><td>Dr. Chen</td>
+                  <td>ACL Reconstruction Recovery</td><td>Sports Rehab</td><td>PT Cruz</td>
                   <td><span class="badge badge-green">Discharged</span></td>
                   <td><div class="flex gap-1"><button class="btn btn-sm btn-outline" onclick="navigate('records',null)">View</button><button class="btn btn-sm btn-primary">Edit</button></div></td>
                 </tr>
                 <tr>
                   <td><div class="flex items-center gap-2"><div class="avatar" style="background:#ef4444;">EM</div><div><div class="bold">Emily Moore</div><div class="text-sm text-muted">emily.m@email.com</div></div></div></td>
                   <td class="text-muted">#P-1040</td><td>68 / F</td>
-                  <td>Cardiac Arrhythmia</td><td>ICU</td><td>Dr. Patel</td>
-                  <td><span class="badge badge-red">Critical</span></td>
+                  <td>Post-Hip Replacement</td><td>Post-Surgical Rehab</td><td>PT Lena</td>
+                  <td><span class="badge badge-yellow">On Hold</span></td>
                   <td><div class="flex gap-1"><button class="btn btn-sm btn-outline" onclick="navigate('records',null)">View</button><button class="btn btn-sm btn-primary">Edit</button></div></td>
                 </tr>
                 <tr>
                   <td><div class="flex items-center gap-2"><div class="avatar" style="background:#10b981;">JD</div><div><div class="bold">James Davis</div><div class="text-sm text-muted">jdavis@email.com</div></div></div></td>
-                  <td class="text-muted">#P-1039</td><td>7 / M</td>
-                  <td>Pneumonia</td><td>Paediatrics</td><td>Dr. Smith</td>
-                  <td><span class="badge badge-yellow">Observation</span></td>
+                  <td class="text-muted">#P-1039</td><td>28 / M</td>
+                  <td>Rotator Cuff Strain</td><td>Orthopaedic PT</td><td>PT Reyes</td>
+                  <td><span class="badge badge-blue">Active</span></td>
                   <td><div class="flex gap-1"><button class="btn btn-sm btn-outline" onclick="navigate('records',null)">View</button><button class="btn btn-sm btn-primary">Edit</button></div></td>
                 </tr>
                 <tr>
                   <td><div class="flex items-center gap-2"><div class="avatar" style="background:#8b5cf6;">AL</div><div><div class="bold">Angela Lee</div><div class="text-sm text-muted">ag.lee@email.com</div></div></div></td>
-                  <td class="text-muted">#P-1038</td><td>29 / F</td>
-                  <td>Pre-natal Check</td><td>Maternity</td><td>Dr. Rosa</td>
-                  <td><span class="badge badge-blue">Admitted</span></td>
+                  <td class="text-muted">#P-1038</td><td>52 / F</td>
+                  <td>Stroke Rehabilitation</td><td>Neurological PT</td><td>PT Santos</td>
+                  <td><span class="badge badge-blue">Active</span></td>
                   <td><div class="flex gap-1"><button class="btn btn-sm btn-outline" onclick="navigate('records',null)">View</button><button class="btn btn-sm btn-primary">Edit</button></div></td>
                 </tr>
               </tbody>
@@ -1004,31 +1004,31 @@
             <div class="appt-slot">
               <div class="appt-time">08:00</div>
               <div class="avatar" style="background:#3b82f6;">RM</div>
-              <div class="appt-info"><strong>Robert Mills</strong><span>Dr. Patel · Cardiology · 30 min</span></div>
+              <div class="appt-info"><strong>Robert Mills</strong><span>PT Santos · Manual Therapy · 30 min</span></div>
               <span class="badge badge-green">Done</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">09:00</div>
               <div class="avatar" style="background:#8b5cf6;">TW</div>
-              <div class="appt-info"><strong>Tom Wilson</strong><span>Dr. Lena · Ortho · 45 min</span></div>
-              <span class="badge badge-blue">In Progress</span>
+              <div class="appt-info"><strong>Tom Wilson</strong><span>PT Lena · Post-Surgical Rehab · 45 min</span></div>
+              <span class="badge badge-blue">In Session</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">10:15</div>
               <div class="avatar" style="background:#10b981;">AB</div>
-              <div class="appt-info"><strong>Alice Brown</strong><span>Dr. Patel · Cardiology · 30 min</span></div>
+              <div class="appt-info"><strong>Alice Brown</strong><span>PT Santos · Manual Therapy · 30 min</span></div>
               <span class="badge badge-gray">Scheduled</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">11:30</div>
               <div class="avatar" style="background:#ec4899;">MP</div>
-              <div class="appt-info"><strong>Maria Park</strong><span>Dr. Rosa · Maternity · 20 min</span></div>
+              <div class="appt-info"><strong>Maria Park</strong><span>PT Cruz · Sports Rehab · 45 min</span></div>
               <span class="badge badge-gray">Scheduled</span>
             </div>
             <div class="appt-slot">
               <div class="appt-time">14:00</div>
               <div class="avatar" style="background:#f59e0b;">GT</div>
-              <div class="appt-info"><strong>George Taylor</strong><span>Dr. Chen · Neurology · 60 min</span></div>
+              <div class="appt-info"><strong>George Taylor</strong><span>PT Reyes · Neurological PT · 60 min</span></div>
               <span class="badge badge-yellow">Waiting</span>
             </div>
           </div>
@@ -1037,11 +1037,11 @@
             <div class="card-title">Quick Book</div>
             <div class="flex flex-col gap-3">
               <div class="field"><label>Patient</label><input class="input" placeholder="Search patient name or ID…" /></div>
-              <div class="field"><label>Department</label>
-                <select class="select"><option>Select department</option><option>Cardiology</option><option>Neurology</option><option>Orthopaedics</option><option>Paediatrics</option><option>Maternity</option></select>
+              <div class="field"><label>PT Service</label>
+                <select class="select"><option>Select PT service</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option><option>Pediatric PT</option></select>
               </div>
-              <div class="field"><label>Doctor</label>
-                <select class="select"><option>Select doctor</option><option>Dr. Patel</option><option>Dr. Chen</option><option>Dr. Lena</option><option>Dr. Smith</option></select>
+              <div class="field"><label>Therapist</label>
+                <select class="select"><option>Select therapist</option><option>PT Santos</option><option>PT Cruz</option><option>PT Lena</option><option>PT Reyes</option></select>
               </div>
               <div class="grid-2" style="gap:10px;">
                 <div class="field"><label>Date</label><input class="input" type="date" value="2026-02-22" /></div>
@@ -1073,96 +1073,97 @@
               <div class="text-xl">Robert Cole</div>
               <div class="text-sm text-muted" style="margin-top:2px;">Male · 45 years · DOB: 1981-03-14 · Blood: O+</div>
               <div class="flex gap-3 wrap" style="margin-top:10px;">
-                <span class="badge badge-blue">Admitted</span>
-                <span class="badge badge-gray">Ward: General B, Bed 7</span>
-                <span class="badge badge-gray">Dr. Patel</span>
+                <span class="badge badge-blue">Active Patient</span>
+                <span class="badge badge-gray">Service: Manual Therapy</span>
+                <span class="badge badge-gray">PT Santos</span>
               </div>
             </div>
             <div class="flex gap-2">
               <button class="btn btn-outline btn-sm">📞 Contact</button>
-              <button class="btn btn-outline btn-sm">💊 Prescription</button>
+              <button class="btn btn-outline btn-sm">📋 Exercise Plan</button>
             </div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:14px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border2);">
-            <div><div class="text-sm text-muted">Admission Date</div><div class="bold">Feb 18, 2026</div></div>
-            <div><div class="text-sm text-muted">Allergies</div><div class="bold" style="color:var(--danger);">Penicillin</div></div>
+            <div><div class="text-sm text-muted">Start Date</div><div class="bold">Feb 10, 2026</div></div>
+            <div><div class="text-sm text-muted">Referral Source</div><div class="bold">ORTHO Clinic</div></div>
             <div><div class="text-sm text-muted">Height / Weight</div><div class="bold">178 cm / 82 kg</div></div>
-            <div><div class="text-sm text-muted">Blood Pressure</div><div class="bold">145/90 mmHg</div></div>
-            <div><div class="text-sm text-muted">Heart Rate</div><div class="bold">88 bpm</div></div>
-            <div><div class="text-sm text-muted">Temperature</div><div class="bold">37.2 °C</div></div>
+            <div><div class="text-sm text-muted">Pain Score (VAS)</div><div class="bold" style="color:var(--warn);">6/10</div></div>
+            <div><div class="text-sm text-muted">Sessions Done</div><div class="bold">8 / 20</div></div>
+            <div><div class="text-sm text-muted">Next Session</div><div class="bold">Feb 25, 2026</div></div>
           </div>
         </div>
 
         <div class="tabs">
           <div class="tab active" onclick="switchTab(this,'tab-history')">Patient History</div>
-          <div class="tab" onclick="switchTab(this,'tab-labs')">Lab Results</div>
-          <div class="tab" onclick="switchTab(this,'tab-meds')">Medications</div>
-          <div class="tab" onclick="switchTab(this,'tab-notes')">Doctor Notes</div>
+          <div class="tab" onclick="switchTab(this,'tab-assess')">PT Assessments</div>
+          <div class="tab" onclick="switchTab(this,'tab-exercise')">Exercise Program</div>
+          <div class="tab" onclick="switchTab(this,'tab-notes')">Therapist Notes</div>
         </div>
 
         <div id="tab-history" class="tab-panel">
           <div class="card">
             <div class="timeline">
               <div class="tl-item">
-                <div class="tl-dot" style="background:var(--danger);"></div>
-                <div class="tl-content">
-                  <strong>Admitted to General Ward</strong>
-                  <span>Feb 18, 2026 · 09:14 · Dr. Patel</span>
-                  <p>Patient presented with chest pain and elevated BP (155/95). ECG ordered. Started on Amlodipine 5 mg.</p>
-                </div>
-              </div>
-              <div class="tl-item">
                 <div class="tl-dot" style="background:var(--accent);"></div>
                 <div class="tl-content">
-                  <strong>Lab Results Received</strong>
-                  <span>Feb 19, 2026 · 11:30</span>
-                  <p>Lipid panel showed elevated LDL (180 mg/dL). Troponin normal.</p>
+                  <strong>Initial PT Evaluation</strong>
+                  <span>Feb 10, 2026 · 09:00 · PT Santos</span>
+                  <p>Patient referred for low back pain. Pain score 7/10 (VAS). Limited lumbar flexion. Treatment plan: 20 sessions of manual therapy + home exercise program.</p>
                 </div>
               </div>
               <div class="tl-item">
                 <div class="tl-dot" style="background:var(--ok);"></div>
                 <div class="tl-content">
-                  <strong>Vitals Improving</strong>
-                  <span>Feb 21, 2026 · 08:00 · Nurse Turner</span>
-                  <p>BP reduced to 140/88. Patient ambulatory and responding well.</p>
+                  <strong>Session 4 – Progress Noted</strong>
+                  <span>Feb 14, 2026 · 10:00 · PT Santos</span>
+                  <p>Pain reduced to 5/10. Lumbar flexion improved by 15°. Patient tolerating manual therapy well. Progressing HEP.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot" style="background:var(--ok);"></div>
+                <div class="tl-content">
+                  <strong>Session 8 – Mid-Program Review</strong>
+                  <span>Feb 21, 2026 · 08:00 · PT Santos</span>
+                  <p>Pain 4/10. Full ROM in flexion restored. Side-bending still limited. Continue manual therapy + core stabilization exercises.</p>
                 </div>
               </div>
               <div class="tl-item">
                 <div class="tl-dot" style="background:var(--warn);"></div>
                 <div class="tl-content">
-                  <strong>Follow-up Echo Scheduled</strong>
-                  <span>Feb 22, 2026 · 10:00 · Dr. Patel</span>
-                  <p>Echocardiogram booked for Feb 25. Discharge expected after results.</p>
+                  <strong>Next Assessment Scheduled</strong>
+                  <span>Feb 25, 2026 · 10:00 · PT Santos</span>
+                  <p>Re-evaluation of pain scores and ROM. Consider graduation to home program if goals met.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div id="tab-labs" class="tab-panel hidden">
+        <div id="tab-assess" class="tab-panel hidden">
           <div class="card">
             <div class="tbl-wrap">
               <table>
-                <thead><tr><th>Test</th><th>Result</th><th>Reference</th><th>Status</th><th>Date</th></tr></thead>
+                <thead><tr><th>Assessment</th><th>Result</th><th>Reference</th><th>Status</th><th>Date</th></tr></thead>
                 <tbody>
-                  <tr><td>Troponin I</td><td>0.01 ng/mL</td><td>0–0.04 ng/mL</td><td><span class="badge badge-green">Normal</span></td><td>Feb 18</td></tr>
-                  <tr><td>LDL Cholesterol</td><td>180 mg/dL</td><td>&lt;100 mg/dL</td><td><span class="badge badge-red">High</span></td><td>Feb 19</td></tr>
-                  <tr><td>Fasting Glucose</td><td>108 mg/dL</td><td>70–99 mg/dL</td><td><span class="badge badge-yellow">Borderline</span></td><td>Feb 19</td></tr>
-                  <tr><td>eGFR</td><td>78 mL/min</td><td>&gt;60 mL/min</td><td><span class="badge badge-green">Normal</span></td><td>Feb 20</td></tr>
-                  <tr><td>CBC – WBC</td><td>7.2 ×10³/μL</td><td>4.5–11.0</td><td><span class="badge badge-green">Normal</span></td><td>Feb 20</td></tr>
+                  <tr><td>Pain (VAS)</td><td>4/10</td><td>&lt;3/10 target</td><td><span class="badge badge-yellow">Improving</span></td><td>Feb 21</td></tr>
+                  <tr><td>Lumbar Flexion ROM</td><td>75°</td><td>60° min functional</td><td><span class="badge badge-green">Achieved</span></td><td>Feb 21</td></tr>
+                  <tr><td>Lumbar Extension ROM</td><td>15°</td><td>25° target</td><td><span class="badge badge-yellow">In Progress</span></td><td>Feb 21</td></tr>
+                  <tr><td>Lumbar Side-Bending (L)</td><td>18°</td><td>25° target</td><td><span class="badge badge-yellow">In Progress</span></td><td>Feb 21</td></tr>
+                  <tr><td>Patient Functional Score (PROM)</td><td>62/100</td><td>&gt;80 target</td><td><span class="badge badge-yellow">In Progress</span></td><td>Feb 21</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
         </div>
-        <div id="tab-meds" class="tab-panel hidden">
+        <div id="tab-exercise" class="tab-panel hidden">
           <div class="card">
             <div class="tbl-wrap">
               <table>
-                <thead><tr><th>Medication</th><th>Dose</th><th>Frequency</th><th>Route</th><th>Prescribed By</th><th>Status</th></tr></thead>
+                <thead><tr><th>Exercise</th><th>Sets/Reps</th><th>Frequency</th><th>Notes</th><th>Status</th></tr></thead>
                 <tbody>
-                  <tr><td><strong>Amlodipine</strong></td><td>5 mg</td><td>Once daily</td><td>Oral</td><td>Dr. Patel</td><td><span class="badge badge-green">Active</span></td></tr>
-                  <tr><td><strong>Atorvastatin</strong></td><td>40 mg</td><td>Nightly</td><td>Oral</td><td>Dr. Patel</td><td><span class="badge badge-green">Active</span></td></tr>
-                  <tr><td><strong>Aspirin</strong></td><td>81 mg</td><td>Once daily</td><td>Oral</td><td>Dr. Patel</td><td><span class="badge badge-green">Active</span></td></tr>
+                  <tr><td><strong>Pelvic Tilts</strong></td><td>3 × 10</td><td>Daily</td><td>Supine, no pain</td><td><span class="badge badge-green">Active</span></td></tr>
+                  <tr><td><strong>Bird-Dog</strong></td><td>3 × 8 each side</td><td>Daily</td><td>Slow controlled movement</td><td><span class="badge badge-green">Active</span></td></tr>
+                  <tr><td><strong>Dead Bug</strong></td><td>3 × 6 each side</td><td>Daily</td><td>Maintain neutral spine</td><td><span class="badge badge-green">Active</span></td></tr>
+                  <tr><td><strong>Prone Press-Up</strong></td><td>3 × 10</td><td>Twice daily</td><td>Centralization exercise</td><td><span class="badge badge-green">Active</span></td></tr>
                 </tbody>
               </table>
             </div>
@@ -1171,51 +1172,51 @@
         <div id="tab-notes" class="tab-panel hidden">
           <div class="card">
             <div class="flex flex-col gap-3" style="margin-bottom:20px;">
-              <div class="field"><label>Add Doctor Note</label><textarea class="input" rows="3" placeholder="Enter clinical notes…" style="resize:vertical;"></textarea></div>
+              <div class="field"><label>Add Therapist Note</label><textarea class="input" rows="3" placeholder="Enter clinical notes…" style="resize:vertical;"></textarea></div>
               <button class="btn btn-primary" style="align-self:flex-start;">Save Note</button>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--accent);"></div>
-              <div><div class="act-text" style="font-size:13px;"><strong>Dr. Patel:</strong> Patient stable. Echo booked. Continue current meds, low-salt diet advised.</div><div class="act-time">Feb 22, 10:05</div></div>
+              <div><div class="act-text" style="font-size:13px;"><strong>PT Santos:</strong> Patient progressing well. Pain at 4/10. Continue manual therapy + HEP. Reassess ROM next session.</div><div class="act-time">Feb 22, 10:05</div></div>
             </div>
             <div class="activity-item">
               <div class="act-dot" style="background:var(--ok);"></div>
-              <div><div class="act-text" style="font-size:13px;"><strong>Nurse Turner:</strong> BP measured 140/88, patient not in distress, eating well.</div><div class="act-time">Feb 22, 08:00</div></div>
+              <div><div class="act-text" style="font-size:13px;"><strong>PT Aide Turner:</strong> Patient completed home exercises, reports minimal pain during activity.</div><div class="act-time">Feb 22, 08:00</div></div>
             </div>
           </div>
         </div>
       </div><!-- /records -->
 
-      <!-- ──── OPD / IPD ──── -->
+      <!-- ──── PT SESSIONS / INTAKE ──── -->
       <div id="screen-opd" class="screen">
-        <div class="page-header"><h2>OPD / IPD Management</h2><p>Outpatient and inpatient flow control</p></div>
+        <div class="page-header"><h2>PT Session Management</h2><p>Daily patient session intake and discharge flow</p></div>
         <div class="grid-2" style="margin-bottom:20px;">
           <div class="card" style="border-top:4px solid var(--accent);">
-            <div class="card-title">🚪 Outpatient (OPD)</div>
-            <div class="stat-val">34</div><div class="stat-lbl">Patients in queue today</div>
+            <div class="card-title">🚪 Today's Sessions</div>
+            <div class="stat-val">34</div><div class="stat-lbl">New &amp; follow-up patients today</div>
             <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
-              <div class="appt-slot"><div class="appt-time">Token 1</div><div class="avatar" style="background:#3b82f6;">JM</div><div class="appt-info"><strong>John Martin</strong><span>General Medicine</span></div><span class="badge badge-blue">In Consult</span></div>
-              <div class="appt-slot"><div class="appt-time">Token 2</div><div class="avatar" style="background:#f59e0b;">PR</div><div class="appt-info"><strong>Priya Rao</strong><span>Dermatology</span></div><span class="badge badge-yellow">Waiting</span></div>
-              <div class="appt-slot"><div class="appt-time">Token 3</div><div class="avatar" style="background:#10b981;">CL</div><div class="appt-info"><strong>Chris Lane</strong><span>ENT</span></div><span class="badge badge-gray">Registered</span></div>
+              <div class="appt-slot"><div class="appt-time">Rm 1</div><div class="avatar" style="background:#3b82f6;">JM</div><div class="appt-info"><strong>John Martin</strong><span>Manual Therapy</span></div><span class="badge badge-blue">In Session</span></div>
+              <div class="appt-slot"><div class="appt-time">Rm 2</div><div class="avatar" style="background:#f59e0b;">PR</div><div class="appt-info"><strong>Priya Rao</strong><span>Sports Rehab</span></div><span class="badge badge-yellow">Waiting</span></div>
+              <div class="appt-slot"><div class="appt-time">Rm 3</div><div class="avatar" style="background:#10b981;">CL</div><div class="appt-info"><strong>Chris Lane</strong><span>Post-Surgical Rehab</span></div><span class="badge badge-gray">Registered</span></div>
             </div>
           </div>
-          <div class="card" style="border-top:4px solid var(--danger);">
-            <div class="card-title">🛏️ Inpatient (IPD)</div>
-            <div class="stat-val">37</div><div class="stat-lbl">Currently admitted</div>
+          <div class="card" style="border-top:4px solid var(--ok);">
+            <div class="card-title">✅ Completed / Discharged Today</div>
+            <div class="stat-val">12</div><div class="stat-lbl">Sessions completed today</div>
             <div style="margin-top:16px;display:flex;flex-direction:column;gap:10px;">
-              <div class="appt-slot"><div class="appt-time">B-7</div><div class="avatar" style="background:#8b5cf6;">RC</div><div class="appt-info"><strong>Robert Cole</strong><span>Cardiology · Day 4</span></div><span class="badge badge-blue">Stable</span></div>
-              <div class="appt-slot"><div class="appt-time">ICU-3</div><div class="avatar" style="background:#ef4444;">EM</div><div class="appt-info"><strong>Emily Moore</strong><span>Cardiac · Day 1</span></div><span class="badge badge-red">Critical</span></div>
-              <div class="appt-slot"><div class="appt-time">P-2</div><div class="avatar" style="background:#10b981;">JD</div><div class="appt-info"><strong>James Davis</strong><span>Paediatrics · Day 2</span></div><span class="badge badge-yellow">Observation</span></div>
+              <div class="appt-slot"><div class="appt-time">08:30</div><div class="avatar" style="background:#8b5cf6;">RC</div><div class="appt-info"><strong>Robert Cole</strong><span>Manual Therapy · Session 8</span></div><span class="badge badge-green">Done</span></div>
+              <div class="appt-slot"><div class="appt-time">09:00</div><div class="avatar" style="background:#ef4444;">EM</div><div class="appt-info"><strong>Emily Moore</strong><span>Post-Surgical Rehab · Session 14</span></div><span class="badge badge-green">Done</span></div>
+              <div class="appt-slot"><div class="appt-time">10:00</div><div class="avatar" style="background:#10b981;">JD</div><div class="appt-info"><strong>James Davis</strong><span>Sports Rehab · Session 3</span></div><span class="badge badge-green">Done</span></div>
             </div>
           </div>
         </div>
         <div class="card">
-          <div class="card-title">Admission / Discharge Actions</div>
+          <div class="card-title">Session Actions</div>
           <div class="flex gap-2 wrap">
-            <button class="btn btn-primary" onclick="openModal('newPatientModal')">+ Admit New Patient</button>
-            <button class="btn btn-ok">✓ Discharge Patient</button>
-            <button class="btn btn-outline">🔄 Transfer Ward</button>
-            <button class="btn btn-danger">🚨 Raise Emergency</button>
+            <button class="btn btn-primary" onclick="openModal('newPatientModal')">+ Register New Patient</button>
+            <button class="btn btn-ok">✓ Mark Session Complete</button>
+            <button class="btn btn-outline">🔄 Reschedule Session</button>
+            <button class="btn btn-outline">📋 Add Session Note</button>
           </div>
         </div>
       </div><!-- /opd -->
@@ -1224,56 +1225,56 @@
       <div id="screen-doctors" class="screen">
         <div class="page-header flex justify-between items-center wrap gap-2">
           <div><h2>Therapists</h2><p>Physical therapy staff directory</p></div>
-          <button class="btn btn-primary btn-sm" onclick="openModal('newApptModal')">+ Add Doctor</button>
+          <button class="btn btn-primary btn-sm" onclick="openModal('newApptModal')">+ Add Therapist</button>
         </div>
         <div class="card" style="margin-bottom:18px;">
           <div class="flex gap-2 wrap">
-            <input class="input" style="max-width:280px;" placeholder="🔍 Search doctor…" />
-            <select class="select" style="max-width:180px;"><option>All Departments</option><option>Cardiology</option><option>Neurology</option><option>Orthopaedics</option><option>Paediatrics</option></select>
+            <input class="input" style="max-width:280px;" placeholder="🔍 Search therapist…" />
+            <select class="select" style="max-width:180px;"><option>All PT Services</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option></select>
             <select class="select" style="max-width:140px;"><option>All Shifts</option><option>Morning</option><option>Afternoon</option><option>Night</option></select>
           </div>
         </div>
         <div class="grid-auto">
           <div class="doc-card">
-            <div class="avatar avatar-lg" style="background:#3b82f6;margin:0 auto 12px;">RP</div>
-            <strong>Dr. Rajiv Patel</strong><span>Cardiology</span>
+            <div class="avatar avatar-lg" style="background:#3b82f6;margin:0 auto 12px;">RS</div>
+            <strong>PT Marco Santos</strong><span>Manual Therapy</span>
             <div class="rating">★★★★★ 4.9</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">142</strong></div><div><span>Exp.</span><strong style="display:block;">14 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">86</strong></div><div><span>Exp.</span><strong style="display:block;">10 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
           <div class="doc-card">
-            <div class="avatar avatar-lg" style="background:#8b5cf6;margin:0 auto 12px;">LC</div>
-            <strong>Dr. Linda Chen</strong><span>Neurology</span>
+            <div class="avatar avatar-lg" style="background:#8b5cf6;margin:0 auto 12px;">JC</div>
+            <strong>PT Jamie Cruz</strong><span>Sports Rehab</span>
             <div class="rating">★★★★☆ 4.7</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">98</strong></div><div><span>Exp.</span><strong style="display:block;">9 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">64</strong></div><div><span>Exp.</span><strong style="display:block;">7 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
           <div class="doc-card">
             <div class="avatar avatar-lg" style="background:#ec4899;margin:0 auto 12px;">ML</div>
-            <strong>Dr. Maria Lena</strong><span>Orthopaedics</span>
+            <strong>PT Maria Lena</strong><span>Post-Surgical Rehab</span>
             <div class="rating">★★★★★ 4.8</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">76</strong></div><div><span>Exp.</span><strong style="display:block;">11 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--warn);">On leave</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">52</strong></div><div><span>Exp.</span><strong style="display:block;">11 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--warn);">On leave</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
           <div class="doc-card">
-            <div class="avatar avatar-lg" style="background:#f59e0b;margin:0 auto 12px;">JS</div>
-            <strong>Dr. James Smith</strong><span>Paediatrics</span>
+            <div class="avatar avatar-lg" style="background:#f59e0b;margin:0 auto 12px;">TR</div>
+            <strong>PT Tom Reyes</strong><span>Neurological PT</span>
             <div class="rating">★★★★☆ 4.6</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">113</strong></div><div><span>Exp.</span><strong style="display:block;">7 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">41</strong></div><div><span>Exp.</span><strong style="display:block;">8 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
           <div class="doc-card">
-            <div class="avatar avatar-lg" style="background:#10b981;margin:0 auto 12px;">AR</div>
-            <strong>Dr. Anna Rosa</strong><span>Obstetrics</span>
+            <div class="avatar avatar-lg" style="background:#10b981;margin:0 auto 12px;">SW</div>
+            <strong>PT Sara Wong</strong><span>Orthopaedic PT</span>
             <div class="rating">★★★★★ 4.9</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">88</strong></div><div><span>Exp.</span><strong style="display:block;">12 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">58</strong></div><div><span>Exp.</span><strong style="display:block;">9 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
           <div class="doc-card">
-            <div class="avatar avatar-lg" style="background:#ef4444;margin:0 auto 12px;">KM</div>
-            <strong>Dr. Karl Müller</strong><span>Emergency</span>
+            <div class="avatar avatar-lg" style="background:#ef4444;margin:0 auto 12px;">KP</div>
+            <strong>PT Kevin Park</strong><span>Pediatric PT</span>
             <div class="rating">★★★★☆ 4.5</div>
-            <div class="foot"><div><span>Patients</span><strong style="display:block;">204</strong></div><div><span>Exp.</span><strong style="display:block;">18 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
+            <div class="foot"><div><span>Patients</span><strong style="display:block;">33</strong></div><div><span>Exp.</span><strong style="display:block;">6 yrs</strong></div><div><span>Status</span><strong style="display:block;color:var(--ok);">On duty</strong></div></div>
             <button class="btn btn-outline btn-sm full-w" style="margin-top:12px;">View Schedule</button>
           </div>
         </div>
@@ -1288,13 +1289,13 @@
         <div class="card">
           <div class="tbl-wrap">
             <table>
-              <thead><tr><th>Name</th><th>Role</th><th>Department</th><th>Shift</th><th>Phone</th><th>Status</th><th>Actions</th></tr></thead>
+              <thead><tr><th>Name</th><th>Role</th><th>PT Service</th><th>Shift</th><th>Phone</th><th>Status</th><th>Actions</th></tr></thead>
               <tbody>
-                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#10b981;">AT</div><strong>Angela Turner</strong></div></td><td>Senior Nurse</td><td>General</td><td>Morning</td><td>+1 555-0101</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
-                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#8b5cf6;">BK</div><strong>Ben Kowalski</strong></div></td><td>Nurse</td><td>ICU</td><td>Night</td><td>+1 555-0102</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
-                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#f59e0b;">CH</div><strong>Clara Hassan</strong></div></td><td>Receptionist</td><td>Front Desk</td><td>Morning</td><td>+1 555-0103</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
-                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#ef4444;">DM</div><strong>David Miller</strong></div></td><td>Lab Technician</td><td>Pathology</td><td>Afternoon</td><td>+1 555-0104</td><td><span class="badge badge-yellow">On leave</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
-                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#3b82f6;">FO</div><strong>Faith Okafor</strong></div></td><td>Pharmacist</td><td>Pharmacy</td><td>Morning</td><td>+1 555-0105</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#10b981;">AT</div><strong>Angela Turner</strong></div></td><td>PT Aide</td><td>Manual Therapy</td><td>Morning</td><td>+1 555-0101</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#8b5cf6;">BK</div><strong>Ben Kowalski</strong></div></td><td>PT Aide</td><td>Sports Rehab</td><td>Afternoon</td><td>+1 555-0102</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#f59e0b;">CH</div><strong>Clara Hassan</strong></div></td><td>Front Desk</td><td>Admin</td><td>Morning</td><td>+1 555-0103</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#ef4444;">DM</div><strong>David Miller</strong></div></td><td>PT Aide</td><td>Post-Surgical Rehab</td><td>Afternoon</td><td>+1 555-0104</td><td><span class="badge badge-yellow">On leave</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
+                <tr><td><div class="flex items-center gap-2"><div class="avatar" style="background:#3b82f6;">FO</div><strong>Faith Okafor</strong></div></td><td>Front Desk</td><td>Admin</td><td>Morning</td><td>+1 555-0105</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">Edit</button></td></tr>
               </tbody>
             </table>
           </div>
@@ -1312,10 +1313,10 @@
             <table>
               <thead><tr><th>Staff</th><th>Role</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr></thead>
               <tbody>
-                <tr><td><strong>Dr. Patel</strong></td><td class="text-muted">Cardiology</td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-yellow">ON-CALL</span></td><td><span class="badge badge-blue">AM</span></td></tr>
-                <tr><td><strong>Dr. Chen</strong></td><td class="text-muted">Neurology</td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-yellow">ON-CALL</span></td></tr>
-                <tr><td><strong>Nurse Turner</strong></td><td class="text-muted">General</td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-gray">OFF</span></td></tr>
-                <tr><td><strong>Nurse Kowalski</strong></td><td class="text-muted">ICU</td><td><span class="badge badge-red">NIGHT</span></td><td><span class="badge badge-red">NIGHT</span></td><td><span class="badge badge-red">NIGHT</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-red">NIGHT</span></td><td><span class="badge badge-red">NIGHT</span></td></tr>
+                <tr><td><strong>PT Santos</strong></td><td class="text-muted">Manual Therapy</td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-yellow">ON-CALL</span></td><td><span class="badge badge-gray">OFF</span></td></tr>
+                <tr><td><strong>PT Cruz</strong></td><td class="text-muted">Sports Rehab</td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td></tr>
+                <tr><td><strong>PT Lena</strong></td><td class="text-muted">Post-Surgical Rehab</td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-gray">OFF</span></td></tr>
+                <tr><td><strong>PT Reyes</strong></td><td class="text-muted">Neurological PT</td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-green">PM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-blue">AM</span></td><td><span class="badge badge-gray">OFF</span></td></tr>
               </tbody>
             </table>
           </div>
@@ -1352,13 +1353,13 @@
           </div>
           <div class="card">
             <div class="card-title">Invoice #1042 – Robert Cole</div>
-            <div class="bill-row"><span>Consultation – Dr. Patel (×4)</span><span>$800</span></div>
-            <div class="bill-row"><span>Room – General Ward (4 nights)</span><span>$1,200</span></div>
-            <div class="bill-row"><span>Lab Tests (lipid, CBC, eGFR)</span><span>$420</span></div>
-            <div class="bill-row"><span>Medications (Amlodipine, Statin)</span><span>$180</span></div>
-            <div class="bill-row"><span>ECG & Echo Scan</span><span>$800</span></div>
+            <div class="bill-row"><span>PT Sessions – PT Santos (×8)</span><span>$960</span></div>
+            <div class="bill-row"><span>Initial Evaluation</span><span>$200</span></div>
+            <div class="bill-row"><span>Ultrasound Therapy (×4)</span><span>$240</span></div>
+            <div class="bill-row"><span>TENS Treatment (×3)</span><span>$150</span></div>
+            <div class="bill-row"><span>Exercise Equipment Use</span><span>$80</span></div>
             <div style="border-top:2px solid var(--border2);margin:8px 0;"></div>
-            <div class="bill-total"><span>Total</span><span>$3,400</span></div>
+            <div class="bill-total"><span>Total</span><span>$1,630</span></div>
             <div style="margin-top:14px;display:flex;gap:8px;">
               <button class="btn btn-primary">💳 Process Payment</button>
               <button class="btn btn-outline">🖨️ Print</button>
@@ -1370,20 +1371,20 @@
       <!-- ──── PHARMACY ──── -->
       <div id="screen-pharmacy" class="screen">
         <div class="page-header flex justify-between items-center wrap gap-2">
-          <div><h2>Pharmacy</h2><p>Medication dispensing and prescriptions</p></div>
-          <button class="btn btn-primary btn-sm">+ Dispense Medication</button>
+          <div><h2>PT Supplies &amp; Equipment</h2><p>Clinic supplies, consumables and equipment stock</p></div>
+          <button class="btn btn-primary btn-sm">+ Add Supply</button>
         </div>
-        <div class="alert alert-red"><span>🚨</span><div><strong>Low Stock:</strong> Paracetamol (12 units), Amoxicillin (8 units), Insulin Glargine (5 units) are below minimum threshold.</div></div>
+        <div class="alert alert-red"><span>⚠️</span><div><strong>Low Stock:</strong> Resistance Bands (8 units), Ultrasound Gel (2 bottles), TENS Electrodes (10 pairs) are below minimum threshold.</div></div>
         <div class="card">
           <div class="tbl-wrap">
             <table>
-              <thead><tr><th>Medication</th><th>Category</th><th>Stock</th><th>Min Level</th><th>Expiry</th><th>Status</th><th>Action</th></tr></thead>
+              <thead><tr><th>Supply / Equipment</th><th>Category</th><th>Stock</th><th>Min Level</th><th>Condition</th><th>Status</th><th>Action</th></tr></thead>
               <tbody>
-                <tr><td><strong>Amlodipine 5mg</strong></td><td>Cardiovascular</td><td>340</td><td>50</td><td>Dec 2027</td><td><span class="badge badge-green">OK</span></td><td><button class="btn btn-sm btn-outline">Dispense</button></td></tr>
-                <tr><td><strong>Paracetamol 500mg</strong></td><td>Analgesic</td><td>12</td><td>100</td><td>Jan 2027</td><td><span class="badge badge-red">Low Stock</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
-                <tr><td><strong>Amoxicillin 250mg</strong></td><td>Antibiotic</td><td>8</td><td>80</td><td>Mar 2026</td><td><span class="badge badge-red">Low + Expiring</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
-                <tr><td><strong>Metformin 500mg</strong></td><td>Antidiabetic</td><td>280</td><td>50</td><td>Aug 2027</td><td><span class="badge badge-green">OK</span></td><td><button class="btn btn-sm btn-outline">Dispense</button></td></tr>
-                <tr><td><strong>Insulin Glargine</strong></td><td>Antidiabetic</td><td>5</td><td>20</td><td>Jul 2026</td><td><span class="badge badge-red">Low Stock</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
+                <tr><td><strong>Ultrasound Gel</strong></td><td>Consumable</td><td>2</td><td>10</td><td>Good</td><td><span class="badge badge-red">Low Stock</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
+                <tr><td><strong>Resistance Bands (Set)</strong></td><td>Exercise</td><td>8</td><td>20</td><td>Good</td><td><span class="badge badge-red">Low Stock</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
+                <tr><td><strong>TENS Electrodes</strong></td><td>Consumable</td><td>10</td><td>30</td><td>Good</td><td><span class="badge badge-red">Low Stock</span></td><td><button class="btn btn-sm btn-danger">Reorder</button></td></tr>
+                <tr><td><strong>Hot/Cold Packs</strong></td><td>Thermal</td><td>24</td><td>10</td><td>Good</td><td><span class="badge badge-green">OK</span></td><td><button class="btn btn-sm btn-outline">Use</button></td></tr>
+                <tr><td><strong>Exercise Balls</strong></td><td>Exercise</td><td>12</td><td>6</td><td>Good</td><td><span class="badge badge-green">OK</span></td><td><button class="btn btn-sm btn-outline">Use</button></td></tr>
               </tbody>
             </table>
           </div>
@@ -1409,11 +1410,11 @@
             <table>
               <thead><tr><th>Item</th><th>Category</th><th>Qty</th><th>Unit</th><th>Location</th><th>Status</th></tr></thead>
               <tbody>
-                <tr><td><strong>Surgical Gloves (L)</strong></td><td>Consumables</td><td>1200</td><td>pairs</td><td>Store A</td><td><span class="badge badge-green">OK</span></td></tr>
-                <tr><td><strong>Oxygen Cylinders</strong></td><td>Equipment</td><td>18</td><td>units</td><td>ICU Store</td><td><span class="badge badge-green">OK</span></td></tr>
-                <tr><td><strong>IV Cannula 20G</strong></td><td>Consumables</td><td>35</td><td>pcs</td><td>Store B</td><td><span class="badge badge-yellow">Low</span></td></tr>
-                <tr><td><strong>Blood Glucose Strips</strong></td><td>Diagnostics</td><td>9</td><td>boxes</td><td>Lab</td><td><span class="badge badge-red">Critical</span></td></tr>
-                <tr><td><strong>Wheelchair</strong></td><td>Equipment</td><td>6</td><td>units</td><td>Ward C</td><td><span class="badge badge-green">OK</span></td></tr>
+                <tr><td><strong>Treatment Table Covers</strong></td><td>Consumables</td><td>200</td><td>pcs</td><td>Store A</td><td><span class="badge badge-green">OK</span></td></tr>
+                <tr><td><strong>TENS Units</strong></td><td>Equipment</td><td>6</td><td>units</td><td>Treatment Rooms</td><td><span class="badge badge-green">OK</span></td></tr>
+                <tr><td><strong>Ultrasound Machines</strong></td><td>Equipment</td><td>3</td><td>units</td><td>Rm 1, 2, 3</td><td><span class="badge badge-green">OK</span></td></tr>
+                <tr><td><strong>Theraband Rolls</strong></td><td>Exercise</td><td>4</td><td>rolls</td><td>Gym Area</td><td><span class="badge badge-yellow">Low</span></td></tr>
+                <tr><td><strong>Treatment Tables</strong></td><td>Equipment</td><td>12</td><td>units</td><td>All Rooms</td><td><span class="badge badge-green">OK</span></td></tr>
               </tbody>
             </table>
           </div>
@@ -1439,7 +1440,7 @@
 
         <div class="grid-2">
           <div class="card">
-            <div class="card-title">Monthly Patient Admissions</div>
+            <div class="card-title">Monthly Patient Sessions</div>
             <div class="bar-chart">
               <div class="bar" style="height:60%;background:var(--accent);" title="Sep:82"></div>
               <div class="bar" style="height:70%;background:var(--accent);" title="Oct:95"></div>
@@ -1452,7 +1453,7 @@
           </div>
 
           <div class="card">
-            <div class="card-title">Case Distribution by Department</div>
+            <div class="card-title">Case Distribution by PT Service</div>
             <div class="donut-wrap">
               <svg width="110" height="110" viewBox="0 0 110 110">
                 <circle cx="55" cy="55" r="40" fill="none" stroke="#e5e7eb" stroke-width="18"/>
@@ -1465,11 +1466,11 @@
               <div class="donut-center"><strong>1,284</strong><span>Total</span></div>
             </div>
             <div class="donut-legend">
-              <div class="legend-item"><div class="legend-dot" style="background:#3b82f6;"></div>Cardiology 40%</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div>General 22%</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div>Ortho 15%</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6;"></div>Neuro 11%</div>
-              <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div>Emergency 12%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#3b82f6;"></div>Manual Therapy 35%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#10b981;"></div>Sports Rehab 25%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#f59e0b;"></div>Post-Surgical 20%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#8b5cf6;"></div>Neuro PT 12%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#ef4444;"></div>Orthopaedic PT 8%</div>
             </div>
           </div>
         </div>
@@ -1513,7 +1514,7 @@
               <div class="field"><label>License Number</label><input class="input" value="PT-NY-20240112" /></div>
               <div class="grid-2" style="gap:12px;">
                 <div class="field"><label>Treatment Rooms</label><input class="input" type="number" value="12" /></div>
-                <div class="field"><label>Max Daily Patients</label><input class="input" type="number" value="60" /></div>
+                <div class="field"><label>Max Daily Patients</label><input class="input" type="number" value="40" /></div>
               </div>
               <button class="btn btn-primary" style="align-self:flex-start;">Update Info</button>
             </div>
@@ -1538,7 +1539,7 @@
           <div class="card" style="max-width:500px;">
             <div class="flex flex-col gap-3">
               <label style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border2);">
-                <div><strong style="display:block;">Emergency Alerts</strong><span class="text-muted text-sm">ICU and critical patient alerts</span></div>
+                <div><strong style="display:block;">Critical Alerts</strong><span class="text-muted text-sm">Equipment issues and critical session alerts</span></div>
                 <input type="checkbox" checked style="width:18px;height:18px;cursor:pointer;" />
               </label>
               <label style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border2);">
@@ -1550,7 +1551,7 @@
                 <input type="checkbox" checked style="width:18px;height:18px;cursor:pointer;" />
               </label>
               <label style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--border2);">
-                <div><strong style="display:block;">Pharmacy Low Stock</strong><span class="text-muted text-sm">When medication drops below minimum</span></div>
+                <div><strong style="display:block;">PT Supplies Low Stock</strong><span class="text-muted text-sm">When supply drops below minimum level</span></div>
                 <input type="checkbox" checked style="width:18px;height:18px;cursor:pointer;" />
               </label>
               <label style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;">
@@ -1577,26 +1578,26 @@
       <!-- HR Dashboard -->
       <div class="rscreen" id="rs-hr-dashboard">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">Hospital HR Admin Menu</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select an HR action to proceed</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">PT Clinic HR Admin Menu</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select an HR action to proceed</p></div>
         </div>
-        <div class="alert alert-green" style="margin-bottom:20px"><span>👥</span><div><strong>HR Admin access confirmed.</strong> You can generate medical staff payroll and manage medical staff records.</div></div>
+        <div class="alert alert-green" style="margin-bottom:20px"><span>👥</span><div><strong>HR Admin access confirmed.</strong> You can generate PT staff payroll and manage PT staff records.</div></div>
         <div class="g4" style="margin-bottom:24px">
-          <div class="stat-card blue"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">86</div><div class="stat-lbl">Total Medical Staff</div><div class="stat-delta">↑ 3 new this month</div></div>
-          <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">74</div><div class="stat-lbl">Active Staff</div><div class="stat-delta">86% active rate</div></div>
+          <div class="stat-card blue"><div class="stat-icon">🦴</div><div class="stat-val">24</div><div class="stat-lbl">Total PT Staff</div><div class="stat-delta">↑ 2 new this month</div></div>
+          <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">22</div><div class="stat-lbl">Active Staff</div><div class="stat-delta">92% active rate</div></div>
           <div class="stat-card warn"><div class="stat-icon">📋</div><div class="stat-val">2</div><div class="stat-lbl">Pending Payroll Runs</div><div class="stat-delta">Cut-off approaching</div></div>
           <div class="stat-card red"><div class="stat-icon">🔴</div><div class="stat-val">5</div><div class="stat-lbl">Inactive Accounts</div><div class="stat-delta">Needs review</div></div>
         </div>
         <div class="g2">
           <div class="card" style="cursor:pointer" onclick="showRS('hr-payroll')">
             <div style="font-size:36px;margin-bottom:10px">💰</div>
-            <div class="card-title">Generate Medical Staff Payroll</div>
+            <div class="card-title">Generate PT Staff Payroll</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Select cut-off date (15th or 30th), retrieve attendance data, calculate pay and generate payroll report.</p>
             <button class="btn btn-primary">Open Payroll →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('hr-staff')">
             <div style="font-size:36px;margin-bottom:10px">👥</div>
-            <div class="card-title">Medical Staff Management</div>
-            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">View all Doctors, Nurses and Admin Staff. Register new staff or activate/deactivate accounts.</p>
+            <div class="card-title">PT Staff Management</div>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">View all Therapists, PT Aides and Admin Staff. Register new staff or activate/deactivate accounts.</p>
             <button class="btn btn-primary">Manage Staff →</button>
           </div>
         </div>
@@ -1605,7 +1606,7 @@
       <!-- HR Payroll -->
       <div class="rscreen" id="rs-hr-payroll">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">💰 Generate Medical Staff Payroll</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select cut-off → Retrieve attendance → Calculate → Generate report</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">💰 Generate PT Staff Payroll</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select cut-off → Retrieve attendance → Calculate → Generate report</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('hr-dashboard')">← Back to Menu</button>
         </div>
         <!-- Wizard -->
@@ -1650,12 +1651,12 @@
           <div class="card">
             <div class="card-title">Attendance Detail</div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Staff Name</th><th>Department</th><th>Reg. Hours</th><th>OT Hours</th><th>On-Call</th><th>Leave Days</th><th>Status</th></tr></thead>
+              <thead><tr><th>Staff Name</th><th>PT Service</th><th>Reg. Hours</th><th>OT Hours</th><th>On-Call</th><th>Leave Days</th><th>Status</th></tr></thead>
               <tbody>
-                <tr><td>Dr. Juan Reyes</td><td>General Medicine</td><td>168</td><td>4</td><td>2</td><td>0</td><td><span class="badge badge-green">Complete</span></td></tr>
-                <tr><td>Maria Cruz</td><td>Nursing</td><td>160</td><td>8</td><td>4</td><td>1</td><td><span class="badge badge-green">Complete</span></td></tr>
-                <tr><td>Rosa Santos</td><td>Admin Staff</td><td>160</td><td>0</td><td>0</td><td>2</td><td><span class="badge badge-yellow">Partial</span></td></tr>
-                <tr><td>Ben Lim</td><td>Physical Therapy</td><td>168</td><td>0</td><td>2</td><td>0</td><td><span class="badge badge-green">Complete</span></td></tr>
+                <tr><td>PT Marco Santos</td><td>Manual Therapy</td><td>168</td><td>4</td><td>0</td><td>0</td><td><span class="badge badge-green">Complete</span></td></tr>
+                <tr><td>PT Jamie Cruz</td><td>Sports Rehab</td><td>160</td><td>0</td><td>0</td><td>1</td><td><span class="badge badge-green">Complete</span></td></tr>
+                <tr><td>Clara Hassan</td><td>Admin</td><td>160</td><td>0</td><td>0</td><td>2</td><td><span class="badge badge-yellow">Partial</span></td></tr>
+                <tr><td>Angela Turner</td><td>Manual Therapy</td><td>168</td><td>0</td><td>0</td><td>0</td><td><span class="badge badge-green">Complete</span></td></tr>
               </tbody>
             </table></div>
             <button class="btn btn-primary" style="margin-top:16px" onclick="goStep(3)">Next: Calculate Payroll →</button>
@@ -1671,10 +1672,10 @@
               <label>Staff Member</label>
               <select class="select" onchange="calcPay(this.value)">
                 <option value="">— Select Staff —</option>
-                <option value="a">Dr. Juan Reyes</option>
-                <option value="b">Maria Cruz</option>
-                <option value="c">Rosa Santos</option>
-                <option value="d">Ben Lim</option>
+                <option value="a">PT Marco Santos</option>
+                <option value="b">PT Jamie Cruz</option>
+                <option value="c">Clara Hassan</option>
+                <option value="d">Angela Turner</option>
               </select>
             </div>
             <div id="pay-breakdown" style="display:none">
@@ -1697,12 +1698,12 @@
               <button class="btn btn-outline btn-sm">🖨️ Print</button>
             </div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Staff Name</th><th>Department</th><th>Regular</th><th>OT</th><th>On-Call</th><th>Deductions</th><th>Gross Pay</th></tr></thead>
+              <thead><tr><th>Staff Name</th><th>PT Service</th><th>Regular</th><th>OT</th><th>On-Call</th><th>Deductions</th><th>Gross Pay</th></tr></thead>
               <tbody>
-                <tr><td>Dr. Juan Reyes</td><td>General Medicine</td><td>₱25,000</td><td>₱2,400</td><td>₱800</td><td style="color:var(--danger)">−₱3,200</td><td><strong>₱25,000</strong></td></tr>
-                <tr><td>Maria Cruz</td><td>Nursing</td><td>₱18,000</td><td>₱4,800</td><td>₱1,600</td><td style="color:var(--danger)">−₱2,880</td><td><strong>₱21,520</strong></td></tr>
-                <tr><td>Rosa Santos</td><td>Admin Staff</td><td>₱16,000</td><td>₱0</td><td>₱0</td><td style="color:var(--danger)">−₱2,560</td><td><strong>₱13,440</strong></td></tr>
-                <tr><td>Ben Lim</td><td>Physical Therapy</td><td>₱20,000</td><td>₱0</td><td>₱800</td><td style="color:var(--danger)">−₱3,200</td><td><strong>₱17,600</strong></td></tr>
+                <tr><td>PT Marco Santos</td><td>Manual Therapy</td><td>₱25,000</td><td>₱2,400</td><td>₱0</td><td style="color:var(--danger)">−₱3,200</td><td><strong>₱24,200</strong></td></tr>
+                <tr><td>PT Jamie Cruz</td><td>Sports Rehab</td><td>₱22,000</td><td>₱0</td><td>₱0</td><td style="color:var(--danger)">−₱2,880</td><td><strong>₱19,120</strong></td></tr>
+                <tr><td>Clara Hassan</td><td>Admin</td><td>₱16,000</td><td>₱0</td><td>₱0</td><td style="color:var(--danger)">−₱2,560</td><td><strong>₱13,440</strong></td></tr>
+                <tr><td>Angela Turner</td><td>Manual Therapy</td><td>₱18,000</td><td>₱0</td><td>₱0</td><td style="color:var(--danger)">−₱2,880</td><td><strong>₱15,120</strong></td></tr>
               </tbody>
             </table></div>
             <div style="margin-top:14px;padding:14px;background:var(--bg);border-radius:8px;display:flex;justify-content:space-between;align-items:center">
@@ -1720,7 +1721,7 @@
       <!-- HR Staff Management -->
       <div class="rscreen" id="rs-hr-staff">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">👥 Medical Staff Management</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">View all medical staff — Doctors, Nurses, Admin Staff</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">👥 PT Staff Management</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">View all PT staff — Therapists, PT Aides, Admin Staff</p></div>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
             <button class="btn btn-primary" onclick="openM('m-register')">➕ Register New Staff</button>
             <button class="btn btn-outline btn-sm" onclick="showRS('hr-dashboard')">← Back to Menu</button>
@@ -1729,50 +1730,50 @@
 
         <!-- Sub-tabs -->
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
-          <div class="tab active" onclick="swtab('staff-tabs','st-all',this)">All Staff (86)</div>
-          <div class="tab" onclick="swtab('staff-tabs','st-doctors',this)">Doctors (24)</div>
-          <div class="tab" onclick="swtab('staff-tabs','st-nurses',this)">Nurses (38)</div>
-          <div class="tab" onclick="swtab('staff-tabs','st-admin',this)">Admin Staff (24)</div>
+          <div class="tab active" onclick="swtab('staff-tabs','st-all',this)">All Staff (24)</div>
+          <div class="tab" onclick="swtab('staff-tabs','st-doctors',this)">Therapists (6)</div>
+          <div class="tab" onclick="swtab('staff-tabs','st-nurses',this)">PT Aides (12)</div>
+          <div class="tab" onclick="swtab('staff-tabs','st-admin',this)">Admin Staff (6)</div>
         </div>
 
         <div id="st-all" class="tab-panel">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
             <input class="input" placeholder="🔍 Search staff…" style="max-width:300px"/>
-            <select class="select" style="max-width:180px"><option>All Departments</option><option>General Medicine</option><option>Nursing</option><option>Physical Therapy</option><option>Admin</option></select>
+            <select class="select" style="max-width:180px"><option>All PT Services</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Admin</option></select>
             <select class="select" style="max-width:140px"><option>All Status</option><option>Active</option><option>Inactive</option></select>
           </div>
           <div class="card"><div style="overflow-x:auto"><table>
-            <thead><tr><th>Staff ID</th><th>Name</th><th>Role</th><th>Department</th><th>Credentials</th><th>Status</th><th>Actions</th></tr></thead>
+            <thead><tr><th>Staff ID</th><th>Name</th><th>Role</th><th>PT Service</th><th>Credentials</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
-              <tr><td>S-001</td><td>Dr. Juan Reyes</td><td>Senior Doctor</td><td>General Medicine</td><td><span class="badge badge-blue">MD, FPCP</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
-              <tr><td>S-002</td><td>Maria Cruz</td><td>Head Nurse</td><td>Nursing</td><td><span class="badge badge-green">RN, BSN</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
-              <tr><td>S-003</td><td>Rosa Santos</td><td>Admin Officer</td><td>Admin Staff</td><td><span class="badge badge-gray">BS Admin</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
-              <tr><td>S-004</td><td>Ben Lim</td><td>Physical Therapist</td><td>Physical Therapy</td><td><span class="badge badge-yellow">BSPT, RPT</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
-              <tr><td>S-005</td><td>Ana Lopez</td><td>Nurse</td><td>Nursing</td><td><span class="badge badge-green">RN</span></td><td><span class="badge badge-red">Inactive</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-ok" onclick="activate(this)">Activate</button></div></td></tr>
+              <tr><td>S-001</td><td>PT Marco Santos</td><td>Senior Therapist</td><td>Manual Therapy</td><td><span class="badge badge-blue">BSPT, MPT</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
+              <tr><td>S-002</td><td>PT Jamie Cruz</td><td>Therapist</td><td>Sports Rehab</td><td><span class="badge badge-yellow">BSPT, RPT</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
+              <tr><td>S-003</td><td>Clara Hassan</td><td>Front Desk</td><td>Admin</td><td><span class="badge badge-gray">BS Admin</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
+              <tr><td>S-004</td><td>Angela Turner</td><td>PT Aide</td><td>Manual Therapy</td><td><span class="badge badge-yellow">CNA, PTCA</span></td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-danger" onclick="deactivate(this)">Deactivate</button></div></td></tr>
+              <tr><td>S-005</td><td>Ben Kowalski</td><td>PT Aide</td><td>Sports Rehab</td><td><span class="badge badge-yellow">PTCA</span></td><td><span class="badge badge-red">Inactive</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline" onclick="openM('m-edit-staff')">Edit</button><button class="btn btn-sm btn-ok" onclick="activate(this)">Activate</button></div></td></tr>
             </tbody>
           </table></div></div>
         </div>
         <div id="st-doctors" class="tab-panel hidden">
-          <div class="card"><div class="card-title">Doctors (24)</div><div style="overflow-x:auto"><table>
-            <thead><tr><th>ID</th><th>Name</th><th>Specialization</th><th>Credentials</th><th>Status</th><th>Actions</th></tr></thead>
+          <div class="card"><div class="card-title">Therapists (6)</div><div style="overflow-x:auto"><table>
+            <thead><tr><th>ID</th><th>Name</th><th>PT Specialty</th><th>Credentials</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
-              <tr><td>S-001</td><td>Dr. Juan Reyes</td><td>General Medicine</td><td><span class="badge badge-blue">MD, FPCP</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
-              <tr><td>S-008</td><td>Dr. Lena Torres</td><td>Rehabilitation</td><td><span class="badge badge-blue">MD, FPCRM</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+              <tr><td>S-001</td><td>PT Marco Santos</td><td>Manual Therapy</td><td><span class="badge badge-blue">BSPT, MPT</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+              <tr><td>S-008</td><td>PT Maria Lena</td><td>Post-Surgical Rehab</td><td><span class="badge badge-blue">BSPT, OCS</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
             </tbody>
           </table></div></div>
         </div>
         <div id="st-nurses" class="tab-panel hidden">
-          <div class="card"><div class="card-title">Nurses (38)</div><div style="overflow-x:auto"><table>
+          <div class="card"><div class="card-title">PT Aides (12)</div><div style="overflow-x:auto"><table>
             <thead><tr><th>ID</th><th>Name</th><th>Assignment</th><th>Credentials</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
-              <tr><td>S-002</td><td>Maria Cruz</td><td>Head Nurse – Ward A</td><td><span class="badge badge-green">RN, BSN</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
-              <tr><td>S-005</td><td>Ana Lopez</td><td>Nurse – ICU</td><td><span class="badge badge-green">RN</span></td><td><span class="badge badge-red">Inactive</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+              <tr><td>S-002</td><td>Angela Turner</td><td>PT Aide – Manual Therapy</td><td><span class="badge badge-yellow">PTCA, CNA</span></td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
+              <tr><td>S-005</td><td>Ben Kowalski</td><td>PT Aide – Sports Rehab</td><td><span class="badge badge-yellow">PTCA</span></td><td><span class="badge badge-red">Inactive</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
             </tbody>
           </table></div></div>
         </div>
         <div id="st-admin" class="tab-panel hidden">
-          <div class="card"><div class="card-title">Admin Staff (24)</div><div style="overflow-x:auto"><table>
-            <thead><tr><th>ID</th><th>Name</th><th>Role</th><th>Department</th><th>Status</th><th>Actions</th></tr></thead>
+          <div class="card"><div class="card-title">Admin Staff (6)</div><div style="overflow-x:auto"><table>
+            <thead><tr><th>ID</th><th>Name</th><th>Role</th><th>PT Service</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
               <tr><td>S-003</td><td>Rosa Santos</td><td>Admin Officer</td><td>Admin</td><td><span class="badge badge-green">Active</span></td><td><button class="btn btn-sm btn-outline">View</button></td></tr>
             </tbody>
@@ -1787,12 +1788,12 @@
       <!-- Supervisor Dashboard -->
       <div class="rscreen" id="rs-sup-dashboard">
         <div style="margin-bottom:20px">
-          <h2 style="font-size:20px;font-weight:700">Medical Supervisor Menu</h2>
+          <h2 style="font-size:20px;font-weight:700">PT Supervisor Menu</h2>
           <p style="color:var(--muted);font-size:13px;margin-top:3px">Select a supervisor action</p>
         </div>
-        <div class="alert" style="background:#f5f3ff;border:1px solid #ddd6fe;color:#5b21b6;margin-bottom:20px"><span>👁️</span><div><strong>Supervisor access confirmed.</strong> You can view staff attendance and review/approve medical staff requests.</div></div>
+        <div class="alert" style="background:#f5f3ff;border:1px solid #ddd6fe;color:#5b21b6;margin-bottom:20px"><span>👁️</span><div><strong>Supervisor access confirmed.</strong> You can view staff attendance and review/approve PT staff requests.</div></div>
         <div class="g4" style="margin-bottom:24px">
-          <div class="stat-card blue"><div class="stat-icon">🗓️</div><div class="stat-val">74</div><div class="stat-lbl">Staff Present Today</div><div class="stat-delta">86% attendance rate</div></div>
+          <div class="stat-card blue"><div class="stat-icon">🗓️</div><div class="stat-val">20</div><div class="stat-lbl">Staff Present Today</div><div class="stat-delta">83% attendance rate</div></div>
           <div class="stat-card warn"><div class="stat-icon">⏳</div><div class="stat-val">12</div><div class="stat-lbl">Pending Requests</div><div class="stat-delta">Needs review</div></div>
           <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">34</div><div class="stat-lbl">Approved This Month</div><div class="stat-delta">↑ 8 vs last month</div></div>
           <div class="stat-card red"><div class="stat-icon">❌</div><div class="stat-val">3</div><div class="stat-lbl">Rejected This Month</div><div class="stat-delta">All reasons logged</div></div>
@@ -1800,13 +1801,13 @@
         <div class="g2">
           <div class="card" style="cursor:pointer" onclick="showRS('sup-attendance')">
             <div style="font-size:36px;margin-bottom:10px">🗓️</div>
-            <div class="card-title">View Medical Staff Attendance</div>
+            <div class="card-title">View PT Staff Attendance</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Display attendance records and generate summary reports — Daily, Weekly, Monthly, Shift Coverage.</p>
             <button class="btn btn-primary">View Attendance →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('sup-requests')">
             <div style="font-size:36px;margin-bottom:10px">📨</div>
-            <div class="card-title">Review Medical Staff Requests</div>
+            <div class="card-title">Review PT Staff Requests</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Review pending leave requests, OT requests and shift changes. Approve or reject with documented reason.</p>
             <button class="btn btn-primary">Review Requests <span class="badge badge-red" style="margin-left:4px">12</span></button>
           </div>
@@ -1816,7 +1817,7 @@
       <!-- Supervisor: Attendance -->
       <div class="rscreen" id="rs-sup-attendance">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">🗓️ View Medical Staff Attendance</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Display attendance records and generate summary reports</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">🗓️ View PT Staff Attendance</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Display attendance records and generate summary reports</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sup-dashboard')">← Back to Menu</button>
         </div>
 
@@ -1831,7 +1832,7 @@
         <div id="at-records" class="tab-panel">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
             <input class="input" type="date" style="max-width:170px" value="2026-02-22"/>
-            <select class="select" style="max-width:190px"><option>All Departments</option><option>General Medicine</option><option>Nursing</option><option>Physical Therapy</option><option>Admin</option></select>
+            <select class="select" style="max-width:190px"><option>All PT Services</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Admin</option></select>
             <button class="btn btn-primary btn-sm">🔍 Filter</button>
           </div>
           <div class="card">
@@ -1840,14 +1841,14 @@
               <button class="btn btn-outline btn-sm">🖨️ Print</button>
             </div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Staff ID</th><th>Name</th><th>Department</th><th>Time In</th><th>Time Out</th><th>Hours</th><th>OT</th><th>Status</th></tr></thead>
+              <thead><tr><th>Staff ID</th><th>Name</th><th>PT Service</th><th>Time In</th><th>Time Out</th><th>Hours</th><th>OT</th><th>Status</th></tr></thead>
               <tbody>
-                <tr><td>S-001</td><td>Dr. Juan Reyes</td><td>General Medicine</td><td>07:58</td><td>17:02</td><td>9.0</td><td>1.0</td><td><span class="att-present">Present</span></td></tr>
-                <tr><td>S-002</td><td>Maria Cruz</td><td>Nursing</td><td>06:55</td><td>15:00</td><td>8.0</td><td>0</td><td><span class="att-present">Present</span></td></tr>
-                <tr><td>S-003</td><td>Rosa Santos</td><td>Admin Staff</td><td>08:30</td><td>17:30</td><td>9.0</td><td>1.0</td><td><span class="att-late">Late</span></td></tr>
-                <tr><td>S-004</td><td>Ben Lim</td><td>Physical Therapy</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="att-leave">On Leave</span></td></tr>
-                <tr><td>S-005</td><td>Ana Lopez</td><td>Nursing</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="att-absent">Absent</span></td></tr>
-                <tr><td>S-006</td><td>Carlo Dela Cruz</td><td>General Medicine</td><td>08:01</td><td>16:00</td><td>8.0</td><td>0</td><td><span class="att-present">Present</span></td></tr>
+                <tr><td>S-001</td><td>PT Marco Santos</td><td>Manual Therapy</td><td>07:55</td><td>17:00</td><td>9.0</td><td>1.0</td><td><span class="att-present">Present</span></td></tr>
+                <tr><td>S-002</td><td>PT Jamie Cruz</td><td>Sports Rehab</td><td>08:00</td><td>16:00</td><td>8.0</td><td>0</td><td><span class="att-present">Present</span></td></tr>
+                <tr><td>S-003</td><td>Clara Hassan</td><td>Admin</td><td>08:30</td><td>17:30</td><td>9.0</td><td>1.0</td><td><span class="att-late">Late</span></td></tr>
+                <tr><td>S-004</td><td>Angela Turner</td><td>Manual Therapy</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="att-leave">On Leave</span></td></tr>
+                <tr><td>S-005</td><td>Ben Kowalski</td><td>Sports Rehab</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="att-absent">Absent</span></td></tr>
+                <tr><td>S-006</td><td>PT Tom Reyes</td><td>Neurological PT</td><td>08:05</td><td>16:00</td><td>8.0</td><td>0</td><td><span class="att-present">Present</span></td></tr>
               </tbody>
             </table></div>
           </div>
@@ -1856,10 +1857,10 @@
         <div id="at-daily" class="tab-panel hidden">
           <div class="card"><div class="card-title">Daily Attendance Summary — Feb 22, 2026</div>
             <div class="g4" style="margin-bottom:18px">
-              <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">68</div><div class="stat-lbl">Present</div></div>
-              <div class="stat-card warn"><div class="stat-icon">🕐</div><div class="stat-val">6</div><div class="stat-lbl">Late</div></div>
-              <div class="stat-card red"><div class="stat-icon">❌</div><div class="stat-val">7</div><div class="stat-lbl">Absent</div></div>
-              <div class="stat-card blue"><div class="stat-icon">🏖️</div><div class="stat-val">5</div><div class="stat-lbl">On Leave</div></div>
+              <div class="stat-card green"><div class="stat-icon">✅</div><div class="stat-val">20</div><div class="stat-lbl">Present</div></div>
+              <div class="stat-card warn"><div class="stat-icon">🕐</div><div class="stat-val">2</div><div class="stat-lbl">Late</div></div>
+              <div class="stat-card red"><div class="stat-icon">❌</div><div class="stat-val">1</div><div class="stat-lbl">Absent</div></div>
+              <div class="stat-card blue"><div class="stat-icon">🏖️</div><div class="stat-val">1</div><div class="stat-lbl">On Leave</div></div>
             </div>
             <button class="btn btn-outline">🖨️ Print Daily Report</button>
           </div>
@@ -1914,7 +1915,7 @@
       <!-- Supervisor: Requests -->
       <div class="rscreen" id="rs-sup-requests">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">📨 Review Medical Staff Requests</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">View pending requests — approve or reject with reason</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">📨 Review PT Staff Requests</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">View pending requests — approve or reject with reason</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sup-dashboard')">← Back to Menu</button>
         </div>
 
@@ -1968,12 +1969,12 @@
           <div class="req-item" id="ri-o1">
             <div class="avatar" style="background:#3b82f6;width:38px;height:38px;font-size:12px;flex-shrink:0">JR</div>
             <div class="req-body">
-              <div class="req-name">Dr. Juan Reyes &nbsp;<span class="badge badge-yellow">OT Request</span></div>
+              <div class="req-name">PT Marco Santos &nbsp;<span class="badge badge-yellow">OT Request</span></div>
               <div class="req-meta">Feb 22, 2026 &nbsp;|&nbsp; 4 OT hours (18:00–22:00) &nbsp;|&nbsp; Emergency coverage</div>
             </div>
             <div class="req-actions">
-              <button class="btn btn-ok btn-sm" onclick="approveReq('ri-o1','Dr. Juan Reyes','OT')">✅ Approve</button>
-              <button class="btn btn-danger btn-sm" onclick="openReject('ri-o1','Dr. Juan Reyes')">❌ Reject</button>
+              <button class="btn btn-ok btn-sm" onclick="approveReq('ri-o1','PT Marco Santos','OT')">✅ Approve</button>
+              <button class="btn btn-danger btn-sm" onclick="openReject('ri-o1','PT Marco Santos')">❌ Reject</button>
             </div>
           </div>
           <div class="req-item" id="ri-o2">
@@ -2027,29 +2028,29 @@
       <!-- Manager Dashboard -->
       <div class="rscreen" id="rs-mgr-dashboard">
         <div style="margin-bottom:20px"><h2 style="font-size:20px;font-weight:700">📊 Clinic Manager Menu</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select a manager action to proceed</p></div>
-        <div class="alert" style="background:#fffbeb;border:1px solid #fde68a;color:#92400e;margin-bottom:20px"><span>📊</span><div><strong>Manager access confirmed.</strong> You can view staff attendance reports, review medical summaries, and approve or return clinical reports.</div></div>
+        <div class="alert" style="background:#fffbeb;border:1px solid #fde68a;color:#92400e;margin-bottom:20px"><span>📊</span><div><strong>Manager access confirmed.</strong> You can view staff attendance reports, review PT summaries, and approve or return clinical reports.</div></div>
         <div class="g4" style="margin-bottom:24px">
           <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">142</div><div class="stat-lbl">Patients Today</div><div class="stat-delta">↑ 12 vs yesterday</div></div>
           <div class="stat-card warn"><div class="stat-icon">📝</div><div class="stat-val">7</div><div class="stat-lbl">Reports Pending Review</div><div class="stat-delta">Needs approval</div></div>
-          <div class="stat-card green"><div class="stat-icon">🏢</div><div class="stat-val">6</div><div class="stat-lbl">Departments Active</div><div class="stat-delta">All operational</div></div>
+          <div class="stat-card green"><div class="stat-icon">�</div><div class="stat-val">6</div><div class="stat-lbl">PT Services Active</div><div class="stat-delta">All operational</div></div>
           <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">74</div><div class="stat-lbl">Staff On Duty</div><div class="stat-delta">86% attendance</div></div>
         </div>
         <div class="g3">
           <div class="card" style="cursor:pointer" onclick="showRS('mgr-attendance')">
             <div style="font-size:36px;margin-bottom:10px">🗓️</div>
             <div class="card-title">View Staff Attendance</div>
-            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Display attendance by department. Generate department coverage and shift distribution reports.</p>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Display attendance by PT service. Generate service coverage and shift distribution reports.</p>
             <button class="btn btn-primary">View Attendance →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('mgr-summaries')">
             <div style="font-size:36px;margin-bottom:10px">📋</div>
-            <div class="card-title">View Medical Summaries</div>
-            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Review patient statistics, staff performance metrics and resource usage across all departments.</p>
+            <div class="card-title">View PT Summaries</div>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Review patient statistics, staff performance metrics and resource usage across all PT services.</p>
             <button class="btn btn-primary">View Summaries →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('mgr-reports')">
             <div style="font-size:36px;margin-bottom:10px">📝</div>
-            <div class="card-title">Review Medical Reports</div>
+            <div class="card-title">Review PT Reports</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:14px">Review pending patient, clinical and operational reports. Approve with digital signature or return for revision.</p>
             <button class="btn btn-primary">Review Reports <span class="badge badge-red" style="margin-left:4px">7</span></button>
           </div>
@@ -2059,19 +2060,19 @@
       <!-- Manager: View Staff Attendance -->
       <div class="rscreen" id="rs-mgr-attendance">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">🗓️ View Staff Attendance</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Display attendance by department — generate coverage and utilization reports</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">🗓️ View Staff Attendance</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Display attendance by PT service — generate coverage and utilization reports</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('mgr-dashboard')">← Back to Menu</button>
         </div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
-          <div class="tab active" onclick="swtab('mgr-att-tabs','ma-dept',this)">📋 Attendance by Department</div>
-          <div class="tab" onclick="swtab('mgr-att-tabs','ma-coverage',this)">📊 Department Coverage Reports</div>
+          <div class="tab active" onclick="swtab('mgr-att-tabs','ma-dept',this)">📋 Attendance by PT Service</div>
+          <div class="tab" onclick="swtab('mgr-att-tabs','ma-coverage',this)">📊 PT Service Coverage Reports</div>
         </div>
 
         <div id="ma-dept" class="tab-panel">
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px">
             <select class="select" style="max-width:200px" id="mgr-dept-filter" onchange="filterMgrDept(this.value)">
-              <option value="">All Departments</option>
-              <option>General Medicine</option><option>Nursing</option><option>Physical Therapy</option><option>ICU</option><option>Emergency</option><option>Admin</option>
+              <option value="">All PT Services</option>
+              <option>Physical Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option><option>Admin</option>
             </select>
             <input class="input" type="date" style="max-width:170px" value="2026-02-22"/>
             <button class="btn btn-primary btn-sm">🔍 Filter</button>
@@ -2084,14 +2085,13 @@
             <div class="stat-card blue"><div class="stat-icon">🏖️</div><div class="stat-val">5</div><div class="stat-lbl">On Leave</div></div>
           </div>
           <div class="card"><div style="overflow-x:auto"><table>
-            <thead><tr><th>Department</th><th>Total Staff</th><th>Present</th><th>Late</th><th>Absent</th><th>On Leave</th><th>Attendance %</th></tr></thead>
+            <thead><tr><th>PT Service</th><th>Total Staff</th><th>Present</th><th>Late</th><th>Absent</th><th>On Leave</th><th>Attendance %</th></tr></thead>
             <tbody>
-              <tr><td><strong>General Medicine</strong></td><td>18</td><td>15</td><td>2</td><td>1</td><td>0</td><td><span class="badge badge-green">83.3%</span></td></tr>
-              <tr><td><strong>Nursing</strong></td><td>28</td><td>24</td><td>2</td><td>1</td><td>1</td><td><span class="badge badge-green">85.7%</span></td></tr>
-              <tr><td><strong>Physical Therapy</strong></td><td>12</td><td>10</td><td>1</td><td>1</td><td>0</td><td><span class="badge badge-green">83.3%</span></td></tr>
-              <tr><td><strong>ICU</strong></td><td>10</td><td>9</td><td>0</td><td>1</td><td>0</td><td><span class="badge badge-green">90.0%</span></td></tr>
-              <tr><td><strong>Emergency</strong></td><td>8</td><td>7</td><td>1</td><td>0</td><td>0</td><td><span class="badge badge-green">87.5%</span></td></tr>
-              <tr><td><strong>Admin</strong></td><td>10</td><td>3</td><td>0</td><td>3</td><td>4</td><td><span class="badge badge-yellow">30.0%</span></td></tr>
+              <tr><td><strong>Manual Therapy</strong></td><td>8</td><td>7</td><td>1</td><td>0</td><td>0</td><td><span class="badge badge-green">87.5%</span></td></tr>
+              <tr><td><strong>Sports Rehab</strong></td><td>6</td><td>5</td><td>0</td><td>1</td><td>0</td><td><span class="badge badge-green">83.3%</span></td></tr>
+              <tr><td><strong>Post-Surgical Rehab</strong></td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td><span class="badge badge-green">100.0%</span></td></tr>
+              <tr><td><strong>Neurological PT</strong></td><td>2</td><td>2</td><td>0</td><td>0</td><td>0</td><td><span class="badge badge-green">100.0%</span></td></tr>
+              <tr><td><strong>Admin</strong></td><td>4</td><td>2</td><td>1</td><td>1</td><td>0</td><td><span class="badge badge-yellow">50.0%</span></td></tr>
             </tbody>
           </table></div></div>
         </div>
@@ -2101,14 +2101,13 @@
             <div class="card">
               <div class="card-title">Staff Utilization Rate</div>
               <div style="overflow-x:auto"><table>
-                <thead><tr><th>Department</th><th>Required</th><th>Deployed</th><th>Utilization</th><th>Status</th></tr></thead>
+                <thead><tr><th>PT Service</th><th>Required</th><th>Deployed</th><th>Utilization</th><th>Status</th></tr></thead>
                 <tbody>
-                  <tr><td>General Medicine</td><td>16</td><td>15</td><td>93.8%</td><td><span class="badge badge-green">OK</span></td></tr>
-                  <tr><td>Nursing</td><td>25</td><td>24</td><td>96.0%</td><td><span class="badge badge-green">OK</span></td></tr>
-                  <tr><td>Physical Therapy</td><td>10</td><td>10</td><td>100%</td><td><span class="badge badge-green">Full</span></td></tr>
-                  <tr><td>ICU</td><td>10</td><td>9</td><td>90.0%</td><td><span class="badge badge-green">OK</span></td></tr>
-                  <tr><td>Emergency</td><td>10</td><td>7</td><td>70.0%</td><td><span class="badge badge-yellow">Low</span></td></tr>
-                  <tr><td>Admin</td><td>8</td><td>3</td><td>37.5%</td><td><span class="badge badge-red">Critical</span></td></tr>
+                  <tr><td>Manual Therapy</td><td>8</td><td>7</td><td>87.5%</td><td><span class="badge badge-green">OK</span></td></tr>
+                  <tr><td>Sports Rehab</td><td>6</td><td>6</td><td>100%</td><td><span class="badge badge-green">Full</span></td></tr>
+                  <tr><td>Post-Surgical Rehab</td><td>4</td><td>4</td><td>100%</td><td><span class="badge badge-green">Full</span></td></tr>
+                  <tr><td>Neurological PT</td><td>2</td><td>2</td><td>100%</td><td><span class="badge badge-green">OK</span></td></tr>
+                  <tr><td>Admin</td><td>4</td><td>3</td><td>75.0%</td><td><span class="badge badge-yellow">Low</span></td></tr>
                 </tbody>
               </table></div>
             </div>
@@ -2133,7 +2132,7 @@
       <!-- Manager: View Medical Summaries -->
       <div class="rscreen" id="rs-mgr-summaries">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">📋 View Medical Summaries</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Patient statistics · Staff performance · Resource usage</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">📋 View PT Summaries</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Patient statistics · Staff performance · Resource usage</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('mgr-dashboard')">← Back to Menu</button>
         </div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
@@ -2144,21 +2143,21 @@
 
         <div id="ms-patients" class="tab-panel">
           <div class="g4" style="margin-bottom:18px">
-            <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">142</div><div class="stat-lbl">Total Patients Today</div><div class="stat-delta">↑ 12 vs yesterday</div></div>
-            <div class="stat-card green"><div class="stat-icon">🛏️</div><div class="stat-val">86</div><div class="stat-lbl">Inpatients</div><div class="stat-delta">72% bed occupancy</div></div>
-            <div class="stat-card warn"><div class="stat-icon">🚶</div><div class="stat-val">56</div><div class="stat-lbl">Outpatients</div><div class="stat-delta">Normal volume</div></div>
-            <div class="stat-card red"><div class="stat-icon">🚑</div><div class="stat-val">12</div><div class="stat-lbl">Emergency Cases</div><div class="stat-delta">↑ 3 this hour</div></div>
+            <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">46</div><div class="stat-lbl">Total Patients Today</div><div class="stat-delta">↑ 5 vs yesterday</div></div>
+            <div class="stat-card green"><div class="stat-icon">🥼</div><div class="stat-val">34</div><div class="stat-lbl">Active Sessions</div><div class="stat-delta">75% room utilization</div></div>
+            <div class="stat-card warn"><div class="stat-icon">🚶</div><div class="stat-val">12</div><div class="stat-lbl">Completed Today</div><div class="stat-delta">Normal volume</div></div>
+            <div class="stat-card blue"><div class="stat-icon">📊</div><div class="stat-val">8</div><div class="stat-lbl">New Referrals</div><div class="stat-delta">↑ 2 this week</div></div>
           </div>
           <div class="card">
-            <div class="card-title">Patients by Department</div>
+            <div class="card-title">Patients by PT Service</div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Department</th><th>Inpatients</th><th>Outpatients</th><th>Emergency</th><th>Discharged Today</th><th>Avg. Stay</th></tr></thead>
+              <thead><tr><th>PT Service</th><th>Active Sessions</th><th>Completed</th><th>New Referrals</th><th>Discharged Today</th><th>Avg. Sessions/Patient</th></tr></thead>
               <tbody>
-                <tr><td>General Medicine</td><td>28</td><td>18</td><td>4</td><td>6</td><td>3.2 days</td></tr>
-                <tr><td>Physical Therapy</td><td>14</td><td>22</td><td>0</td><td>4</td><td>5.8 days</td></tr>
-                <tr><td>ICU</td><td>8</td><td>0</td><td>5</td><td>1</td><td>7.1 days</td></tr>
-                <tr><td>Emergency</td><td>0</td><td>0</td><td>3</td><td>9</td><td>0.4 days</td></tr>
-                <tr><td>Admin / Other</td><td>36</td><td>16</td><td>0</td><td>8</td><td>2.1 days</td></tr>
+                <tr><td>Manual Therapy</td><td>10</td><td>8</td><td>2</td><td>3</td><td>9.2</td></tr>
+                <tr><td>Sports Rehab</td><td>8</td><td>6</td><td>3</td><td>2</td><td>7.4</td></tr>
+                <tr><td>Post-Surgical Rehab</td><td>6</td><td>4</td><td>1</td><td>2</td><td>14.1</td></tr>
+                <tr><td>Neurological PT</td><td>4</td><td>2</td><td>2</td><td>1</td><td>18.3</td></tr>
+                <tr><td>Orthopaedic PT</td><td>6</td><td>4</td><td>0</td><td>1</td><td>8.6</td></tr>
               </tbody>
             </table></div>
           </div>
@@ -2172,15 +2171,15 @@
             <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">🎓</div><div class="stat-val">12</div><div class="stat-lbl">Training Completions</div><div class="stat-delta">This month</div></div>
           </div>
           <div class="card">
-            <div class="card-title">Staff Performance by Department</div>
+            <div class="card-title">Staff Performance by PT Service</div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Department</th><th>Avg. Rating</th><th>OT Hours</th><th>Late Incidents</th><th>Cases Handled</th><th>Performance</th></tr></thead>
+              <thead><tr><th>PT Service</th><th>Avg. Rating</th><th>OT Hours</th><th>Late Incidents</th><th>Cases Handled</th><th>Performance</th></tr></thead>
               <tbody>
-                <tr><td>General Medicine</td><td>4.8</td><td>32</td><td>4</td><td>46</td><td><span class="badge badge-green">Excellent</span></td></tr>
-                <tr><td>Physical Therapy</td><td>4.9</td><td>18</td><td>1</td><td>36</td><td><span class="badge badge-green">Excellent</span></td></tr>
-                <tr><td>Nursing</td><td>4.6</td><td>48</td><td>6</td><td>86</td><td><span class="badge badge-green">Good</span></td></tr>
-                <tr><td>ICU</td><td>4.7</td><td>22</td><td>2</td><td>13</td><td><span class="badge badge-green">Good</span></td></tr>
-                <tr><td>Emergency</td><td>4.5</td><td>6</td><td>3</td><td>12</td><td><span class="badge badge-yellow">Average</span></td></tr>
+                <tr><td>Manual Therapy</td><td>4.9</td><td>18</td><td>1</td><td>54</td><td><span class="badge badge-green">Excellent</span></td></tr>
+                <tr><td>Sports Rehab</td><td>4.7</td><td>12</td><td>2</td><td>42</td><td><span class="badge badge-green">Excellent</span></td></tr>
+                <tr><td>Post-Surgical Rehab</td><td>4.8</td><td>8</td><td>1</td><td>36</td><td><span class="badge badge-green">Good</span></td></tr>
+                <tr><td>Neurological PT</td><td>4.6</td><td>6</td><td>2</td><td>24</td><td><span class="badge badge-green">Good</span></td></tr>
+                <tr><td>Orthopaedic PT</td><td>4.7</td><td>4</td><td>0</td><td>30</td><td><span class="badge badge-yellow">Average</span></td></tr>
               </tbody>
             </table></div>
           </div>
@@ -2188,21 +2187,21 @@
 
         <div id="ms-resources" class="tab-panel hidden">
           <div class="g4" style="margin-bottom:18px">
-            <div class="stat-card green"><div class="stat-icon">🛏️</div><div class="stat-val">72%</div><div class="stat-lbl">Bed Occupancy</div><div class="stat-delta">86 / 120 beds</div></div>
-            <div class="stat-card warn"><div class="stat-icon">💊</div><div class="stat-val">18</div><div class="stat-lbl">Low Stock Meds</div><div class="stat-delta">Reorder needed</div></div>
-            <div class="stat-card blue"><div class="stat-icon">🔬</div><div class="stat-val">94%</div><div class="stat-lbl">Equipment Uptime</div><div class="stat-delta">3 units in service</div></div>
-            <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">💰</div><div class="stat-val">₱1.2M</div><div class="stat-lbl">Monthly Supplies Cost</div><div class="stat-delta">↓ 4% vs last</div></div>
+            <div class="stat-card green"><div class="stat-icon">🦴</div><div class="stat-val">75%</div><div class="stat-lbl">Room Utilization</div><div class="stat-delta">9 / 12 rooms active</div></div>
+            <div class="stat-card warn"><div class="stat-icon">🩹</div><div class="stat-val">4</div><div class="stat-lbl">Low Stock Supplies</div><div class="stat-delta">Reorder needed</div></div>
+            <div class="stat-card blue"><div class="stat-icon">🔬</div><div class="stat-val">96%</div><div class="stat-lbl">Equipment Uptime</div><div class="stat-delta">1 unit in service</div></div>
+            <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">💰</div><div class="stat-val">₱285k</div><div class="stat-lbl">Monthly Supplies Cost</div><div class="stat-delta">↓ 3% vs last</div></div>
           </div>
           <div class="card">
-            <div class="card-title">Department Resource Usage</div>
+            <div class="card-title">PT Service Resource Usage</div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Department</th><th>Beds Used / Total</th><th>Med Usage %</th><th>Equipment Status</th><th>Supply Budget Used</th></tr></thead>
+              <thead><tr><th>PT Service</th><th>Rooms Used / Total</th><th>Supply Usage %</th><th>Equipment Status</th><th>Supply Budget Used</th></tr></thead>
               <tbody>
-                <tr><td>General Medicine</td><td>28 / 40</td><td>71%</td><td><span class="badge badge-green">All OK</span></td><td>68%</td></tr>
-                <tr><td>ICU</td><td>8 / 10</td><td>88%</td><td><span class="badge badge-yellow">1 in Repair</span></td><td>92%</td></tr>
-                <tr><td>Emergency</td><td>— / 12</td><td>76%</td><td><span class="badge badge-green">All OK</span></td><td>55%</td></tr>
-                <tr><td>Physical Therapy</td><td>14 / 20</td><td>44%</td><td><span class="badge badge-yellow">2 in Service</span></td><td>47%</td></tr>
-                <tr><td>Admin / Other</td><td>36 / 38</td><td>32%</td><td><span class="badge badge-green">All OK</span></td><td>38%</td></tr>
+                <tr><td>Manual Therapy</td><td>3 / 3</td><td>78%</td><td><span class="badge badge-green">All OK</span></td><td>72%</td></tr>
+                <tr><td>Sports Rehab</td><td>2 / 3</td><td>88%</td><td><span class="badge badge-yellow">1 in Service</span></td><td>85%</td></tr>
+                <tr><td>Post-Surgical Rehab</td><td>2 / 3</td><td>76%</td><td><span class="badge badge-green">All OK</span></td><td>68%</td></tr>
+                <tr><td>Neurological PT</td><td>1 / 2</td><td>64%</td><td><span class="badge badge-yellow">1 in Service</span></td><td>55%</td></tr>
+                <tr><td>Admin / Other</td><td>0 / 0</td><td>32%</td><td><span class="badge badge-green">All OK</span></td><td>40%</td></tr>
               </tbody>
             </table></div>
           </div>
@@ -2212,7 +2211,7 @@
       <!-- Manager: Review Medical Reports -->
       <div class="rscreen" id="rs-mgr-reports">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">📝 Review Medical Reports</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Pending reports — approve with digital signature or return for revision</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">📝 Review PT Reports</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Pending reports — approve with digital signature or return for revision</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('mgr-dashboard')">← Back to Menu</button>
         </div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
@@ -2227,7 +2226,7 @@
             <div style="font-size:30px;flex-shrink:0">📄</div>
             <div class="req-body">
               <div class="req-name">Patient Discharge Summary — Feb 20, 2026 &nbsp;<span class="badge badge-yellow">Pending Review</span></div>
-              <div class="req-meta">Submitted by: Dr. Juan Reyes &nbsp;|&nbsp; Dept: General Medicine &nbsp;|&nbsp; 14 patients · 8 pages</div>
+              <div class="req-meta">Submitted by: PT Marco Santos &nbsp;|&nbsp; Service: Manual Therapy &nbsp;|&nbsp; 14 patients · 8 pages</div>
               <div class="req-meta" style="margin-top:3px">Covers all discharges from Feb 16–20. Includes diagnosis codes, treatment summary and follow-up instructions.</div>
             </div>
             <div class="req-actions">
@@ -2239,8 +2238,8 @@
             <div style="font-size:30px;flex-shrink:0">📄</div>
             <div class="req-body">
               <div class="req-name">Weekly OPD Patient Report — Feb 15–21 &nbsp;<span class="badge badge-yellow">Pending Review</span></div>
-              <div class="req-meta">Submitted by: Maria Cruz &nbsp;|&nbsp; Dept: Nursing &nbsp;|&nbsp; 56 patients · 5 pages</div>
-              <div class="req-meta" style="margin-top:3px">Outpatient visit count, chief complaints, and nursing interventions.</div>
+              <div class="req-meta">Submitted by: Maria Cruz &nbsp;|&nbsp; Service: Sports Rehab &nbsp;|&nbsp; 56 patients · 5 pages</div>
+              <div class="req-meta" style="margin-top:3px">Session visit count, chief complaints, and therapist notes.</div>
             </div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="openApproveRpt('rpt-p2','Weekly OPD Patient Report')">✅ Approve</button>
@@ -2250,13 +2249,13 @@
           <div class="req-item" id="rpt-p3">
             <div style="font-size:30px;flex-shrink:0">📄</div>
             <div class="req-body">
-              <div class="req-name">ICU Patient Status Report — Feb 22, 2026 &nbsp;<span class="badge badge-red">Urgent</span></div>
-              <div class="req-meta">Submitted by: ICU Head Nurse &nbsp;|&nbsp; Dept: ICU &nbsp;|&nbsp; 8 patients · 3 pages</div>
-              <div class="req-meta" style="margin-top:3px">Critical patient status updates, medication changes and physician orders.</div>
+              <div class="req-name">Neurological PT Patient Status Report — Feb 22, 2026 &nbsp;<span class="badge badge-red">Urgent</span></div>
+              <div class="req-meta">Submitted by: PT Tom Reyes &nbsp;|&nbsp; Service: Neurological PT &nbsp;|&nbsp; 8 patients · 3 pages</div>
+              <div class="req-meta" style="margin-top:3px">Patient status updates, home exercise compliance and therapist recommendations.</div>
             </div>
             <div class="req-actions">
-              <button class="btn btn-ok btn-sm" onclick="openApproveRpt('rpt-p3','ICU Patient Status Report')">✅ Approve</button>
-              <button class="btn btn-outline btn-sm" onclick="openReturnRpt('rpt-p3','ICU Patient Status Report')">↩ Return</button>
+              <button class="btn btn-ok btn-sm" onclick="openApproveRpt('rpt-p3','Neurological PT Patient Status Report')">✅ Approve</button>
+              <button class="btn btn-outline btn-sm" onclick="openReturnRpt('rpt-p3','Neurological PT Patient Status Report')">↩ Return</button>
             </div>
           </div>
         </div>
@@ -2266,7 +2265,7 @@
             <div style="font-size:30px;flex-shrink:0">🔬</div>
             <div class="req-body">
               <div class="req-name">Monthly Clinical Outcomes Report — January 2026 &nbsp;<span class="badge badge-yellow">Pending Review</span></div>
-              <div class="req-meta">Submitted by: Dr. Lena Torres &nbsp;|&nbsp; Dept: Rehabilitation &nbsp;|&nbsp; 12 pages</div>
+              <div class="req-meta">Submitted by: PT Maria Lena &nbsp;|&nbsp; Service: Post-Surgical Rehab &nbsp;|&nbsp; 12 pages</div>
               <div class="req-meta" style="margin-top:3px">Recovery rates, treatment effectiveness, complication rates and clinical KPIs.</div>
             </div>
             <div class="req-actions">
@@ -2333,30 +2332,30 @@
 
       <!-- Super Admin Dashboard -->
       <div class="rscreen" id="rs-sa-dashboard">
-        <div style="margin-bottom:20px"><h2 style="font-size:20px;font-weight:700">🛡️ Hospital Super Admin Menu</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select a super admin action</p></div>
-        <div class="alert alert-blue" style="margin-bottom:20px"><span>🛡️</span><div><strong>Super Admin access confirmed.</strong> You have full system control — hospital data, reports, system management, and all approvals.</div></div>
+        <div style="margin-bottom:20px"><h2 style="font-size:20px;font-weight:700">🛡️ PT Clinic Super Admin Menu</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Select a super admin action</p></div>
+        <div class="alert alert-blue" style="margin-bottom:20px"><span>🛡️</span><div><strong>Super Admin access confirmed.</strong> You have full system control — clinic data, reports, system management, and all approvals.</div></div>
         <div class="g4" style="margin-bottom:24px">
-          <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">142</div><div class="stat-lbl">Total Patients Today</div><div class="stat-delta">↑ 12 vs yesterday</div></div>
-          <div class="stat-card green"><div class="stat-icon">👥</div><div class="stat-val">86</div><div class="stat-lbl">Total Medical Staff</div><div class="stat-delta">74 on duty today</div></div>
+          <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">46</div><div class="stat-lbl">Total Patients Today</div><div class="stat-delta">↑ 5 vs yesterday</div></div>
+          <div class="stat-card green"><div class="stat-icon">👥</div><div class="stat-val">24</div><div class="stat-lbl">Total PT Staff</div><div class="stat-delta">22 on duty today</div></div>
           <div class="stat-card warn"><div class="stat-icon">⏳</div><div class="stat-val">15</div><div class="stat-lbl">Pending Requests</div><div class="stat-delta">Needs review</div></div>
           <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">📝</div><div class="stat-val">8</div><div class="stat-lbl">Reports Pending Final Approval</div><div class="stat-delta">Awaiting signature</div></div>
         </div>
         <div class="g3" style="margin-bottom:16px">
           <div class="card" style="cursor:pointer" onclick="showRS('sa-hospital-data')">
             <div style="font-size:32px;margin-bottom:8px">🏥</div>
-            <div class="card-title">View All Hospital Data</div>
-            <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Patient records, staff data, financial data, system logs — complete hospital dashboard.</p>
+            <div class="card-title">View All Clinic Data</div>
+            <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Patient records, staff data, financial data, system logs — complete clinic dashboard.</p>
             <button class="btn btn-primary">View Data →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('sa-reports')">
             <div style="font-size:32px;margin-bottom:8px">📊</div>
-            <div class="card-title">Generate Hospital Reports</div>
+            <div class="card-title">Generate Clinic Reports</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Financial reports, clinical statistics, staffing analysis, performance metrics.</p>
             <button class="btn btn-primary">Generate Reports →</button>
           </div>
           <div class="card" style="cursor:pointer" onclick="showRS('sa-system')">
             <div style="font-size:32px;margin-bottom:8px">⚙️</div>
-            <div class="card-title">Manage Hospital System</div>
+            <div class="card-title">Manage Clinic System</div>
             <p style="color:var(--muted);font-size:13px;margin-bottom:12px">Full control: all users, settings, permissions, system configuration and audit logs.</p>
             <button class="btn btn-primary">System Control →</button>
           </div>
@@ -2380,7 +2379,7 @@
       <!-- SA: View Complete Hospital Data -->
       <div class="rscreen" id="rs-sa-hospital-data">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">🏥 Complete Hospital Dashboard</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Analytics · Trends · Alerts — all hospital data</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">🏥 Complete Clinic Dashboard</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Analytics · Trends · Alerts — all clinic data</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sa-dashboard')">← Back to Menu</button>
         </div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
@@ -2392,29 +2391,29 @@
 
         <div id="sd-overview" class="tab-panel">
           <div class="g4" style="margin-bottom:18px">
-            <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">142</div><div class="stat-lbl">Patients Today</div><div class="stat-delta">↑ 12 vs yesterday</div></div>
-            <div class="stat-card green"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">86</div><div class="stat-lbl">Total Staff</div><div class="stat-delta">74 on duty</div></div>
-            <div class="stat-card warn"><div class="stat-icon">🛏️</div><div class="stat-val">72%</div><div class="stat-lbl">Bed Occupancy</div><div class="stat-delta">86 / 120 beds</div></div>
+            <div class="stat-card blue"><div class="stat-icon">🏥</div><div class="stat-val">46</div><div class="stat-lbl">Patients Today</div><div class="stat-delta">↑ 5 vs yesterday</div></div>
+            <div class="stat-card green"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">24</div><div class="stat-lbl">Total Staff</div><div class="stat-delta">22 on duty</div></div>
+            <div class="stat-card warn"><div class="stat-icon">🦴</div><div class="stat-val">75%</div><div class="stat-lbl">Room Utilization</div><div class="stat-delta">9 / 12 rooms active</div></div>
             <div class="stat-card" style="border-color:var(--border2)"><div class="stat-icon">💰</div><div class="stat-val">₱2.8M</div><div class="stat-lbl">Monthly Revenue</div><div class="stat-delta">↑ 8% vs last</div></div>
           </div>
           <div class="g2" style="margin-bottom:16px">
             <div class="card">
               <div class="card-title">📈 Patient Trends (Feb 2026)</div>
               <div style="overflow-x:auto"><table>
-                <thead><tr><th>Week</th><th>Inpatients</th><th>Outpatients</th><th>Emergency</th><th>Discharged</th></tr></thead>
+                <thead><tr><th>Week</th><th>Sessions</th><th>New Patients</th><th>Referrals</th><th>Discharged</th></tr></thead>
                 <tbody>
-                  <tr><td>Feb 1–7</td><td>82</td><td>218</td><td>34</td><td>76</td></tr>
-                  <tr><td>Feb 8–14</td><td>88</td><td>234</td><td>41</td><td>84</td></tr>
-                  <tr><td>Feb 15–21</td><td>86</td><td>246</td><td>38</td><td>82</td></tr>
-                  <tr><td>Feb 22 (today)</td><td>86</td><td>56</td><td>12</td><td>14</td></tr>
+                  <tr><td>Feb 1–7</td><td>188</td><td>32</td><td>14</td><td>18</td></tr>
+                  <tr><td>Feb 8–14</td><td>204</td><td>28</td><td>16</td><td>22</td></tr>
+                  <tr><td>Feb 15–21</td><td>196</td><td>30</td><td>12</td><td>20</td></tr>
+                  <tr><td>Feb 22 (today)</td><td>46</td><td>8</td><td>4</td><td>5</td></tr>
                 </tbody>
               </table></div>
             </div>
             <div class="card">
               <div class="card-title">🚨 Active Alerts</div>
               <div class="req-item" style="padding:10px 0;border:none;flex-direction:column;align-items:flex-start;gap:8px">
-                <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;width:100%;font-size:13px"><strong style="color:#dc2626">⚠ Critical:</strong> Night Shift coverage at 27.3% — Emergency dept understaffed</div>
-                <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;width:100%;font-size:13px"><strong style="color:#d97706">⚠ Warning:</strong> 18 medications at low stock — reorder required</div>
+                <div style="background:#fef2f2;border:1px solid #fecaca;border-radius:8px;padding:10px 14px;width:100%;font-size:13px"><strong style="color:#dc2626">⚠ Critical:</strong> Theraband rolls low stock (4 rolls) — reorder immediately</div>
+                <div style="background:#fffbeb;border:1px solid #fde68a;border-radius:8px;padding:10px 14px;width:100%;font-size:13px"><strong style="color:#d97706">⚠ Warning:</strong> 4 supplies at low stock — reorder required</div>
                 <div style="background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:10px 14px;width:100%;font-size:13px"><strong style="color:#1d4ed8">ℹ Info:</strong> 2 equipment units scheduled for maintenance Feb 24</div>
               </div>
             </div>
@@ -2423,20 +2422,20 @@
 
         <div id="sd-staff" class="tab-panel hidden">
           <div class="g4" style="margin-bottom:16px">
-            <div class="stat-card blue"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">24</div><div class="stat-lbl">Total Doctors</div></div>
-            <div class="stat-card green"><div class="stat-icon">👩‍⚕️</div><div class="stat-val">38</div><div class="stat-lbl">Total Nurses</div></div>
-            <div class="stat-card warn"><div class="stat-icon">🧑‍💼</div><div class="stat-val">24</div><div class="stat-lbl">Admin Staff</div></div>
+            <div class="stat-card blue"><div class="stat-icon">👨‍⚕️</div><div class="stat-val">6</div><div class="stat-lbl">Total Therapists</div></div>
+            <div class="stat-card green"><div class="stat-icon">👩‍⚕️</div><div class="stat-val">12</div><div class="stat-lbl">Total PT Aides</div></div>
+            <div class="stat-card warn"><div class="stat-icon">🧑‍💼</div><div class="stat-val">6</div><div class="stat-lbl">Admin Staff</div></div>
             <div class="stat-card red"><div class="stat-icon">🔴</div><div class="stat-val">5</div><div class="stat-lbl">Inactive Accounts</div></div>
           </div>
           <div class="card"><div class="card-title">All Staff Overview</div>
             <div style="overflow-x:auto"><table>
-              <thead><tr><th>Dept</th><th>Doctors</th><th>Nurses</th><th>Admin</th><th>Active</th><th>On Leave</th><th>Inactive</th></tr></thead>
+              <thead><tr><th>Service</th><th>Therapists</th><th>PT Aides</th><th>Admin</th><th>Active</th><th>On Leave</th><th>Inactive</th></tr></thead>
               <tbody>
-                <tr><td>General Medicine</td><td>8</td><td>12</td><td>2</td><td>18</td><td>2</td><td>0</td></tr>
-                <tr><td>Nursing</td><td>0</td><td>18</td><td>2</td><td>18</td><td>1</td><td>1</td></tr>
-                <tr><td>Physical Therapy</td><td>4</td><td>4</td><td>2</td><td>9</td><td>1</td><td>0</td></tr>
-                <tr><td>ICU</td><td>6</td><td>4</td><td>0</td><td>10</td><td>0</td><td>0</td></tr>
-                <tr><td>Admin Staff</td><td>0</td><td>0</td><td>18</td><td>14</td><td>0</td><td>4</td></tr>
+                <tr><td>Manual Therapy</td><td>2</td><td>4</td><td>0</td><td>6</td><td>0</td><td>0</td></tr>
+                <tr><td>Sports Rehab</td><td>1</td><td>3</td><td>0</td><td>4</td><td>0</td><td>0</td></tr>
+                <tr><td>Post-Surgical Rehab</td><td>1</td><td>2</td><td>0</td><td>3</td><td>0</td><td>0</td></tr>
+                <tr><td>Neurological PT</td><td>1</td><td>2</td><td>0</td><td>3</td><td>0</td><td>0</td></tr>
+                <tr><td>Admin</td><td>0</td><td>0</td><td>6</td><td>5</td><td>0</td><td>1</td></tr>
               </tbody>
             </table></div>
           </div>
@@ -2453,10 +2452,10 @@
             <div style="overflow-x:auto"><table>
               <thead><tr><th>Category</th><th>Revenue</th><th>Expenses</th><th>Net</th></tr></thead>
               <tbody>
-                <tr><td>Inpatient Services</td><td>₱1,420,000</td><td>₱860,000</td><td style="color:var(--ok)"><strong>₱560,000</strong></td></tr>
-                <tr><td>Outpatient / OPD</td><td>₱680,000</td><td>₱320,000</td><td style="color:var(--ok)"><strong>₱360,000</strong></td></tr>
-                <tr><td>Emergency Services</td><td>₱420,000</td><td>₱310,000</td><td style="color:var(--ok)"><strong>₱110,000</strong></td></tr>
-                <tr><td>Pharmacy</td><td>₱280,000</td><td>₱220,000</td><td style="color:var(--ok)"><strong>₱60,000</strong></td></tr>
+                <tr><td>PT Sessions</td><td>₱2,100,000</td><td>₱1,200,000</td><td style="color:var(--ok)"><strong>₱900,000</strong></td></tr>
+                <tr><td>Initial Evaluations</td><td>₱380,000</td><td>₱120,000</td><td style="color:var(--ok)"><strong>₱260,000</strong></td></tr>
+                <tr><td>Therapeutic Procedures</td><td>₱220,000</td><td>₱80,000</td><td style="color:var(--ok)"><strong>₱140,000</strong></td></tr>
+                <tr><td>PT Supplies</td><td>₱80,000</td><td>₱62,000</td><td style="color:var(--ok)"><strong>₱18,000</strong></td></tr>
                 <tr><td>HR / Payroll</td><td>—</td><td>₱77,560</td><td style="color:var(--danger)"><strong>−₱77,560</strong></td></tr>
               </tbody>
             </table></div>
@@ -2471,7 +2470,7 @@
                 <tr><td>2026-02-22 08:14</td><td>hradmin@summit.ph</td><td>HR Admin</td><td>Generated payroll — 15th cut-off</td><td><span class="badge badge-green">Success</span></td></tr>
                 <tr><td>2026-02-22 08:02</td><td>supervisor@summit.ph</td><td>Supervisor</td><td>Approved leave request — Maria Cruz</td><td><span class="badge badge-green">Success</span></td></tr>
                 <tr><td>2026-02-22 07:58</td><td>manager@summit.ph</td><td>Manager</td><td>Approved report — Patient Discharge Summary</td><td><span class="badge badge-green">Success</span></td></tr>
-                <tr><td>2026-02-21 17:30</td><td>hradmin@summit.ph</td><td>HR Admin</td><td>Registered new staff — S-087 Dr. Cara Tan</td><td><span class="badge badge-green">Success</span></td></tr>
+                <tr><td>2026-02-21 17:30</td><td>hradmin@summit.ph</td><td>HR Admin</td><td>Registered new staff — S-022 PT Kevin Park</td><td><span class="badge badge-green">Success</span></td></tr>
                 <tr><td>2026-02-21 16:12</td><td>superadmin@summit.ph</td><td>Super Admin</td><td>Modified user permissions — Manager level</td><td><span class="badge badge-green">Success</span></td></tr>
                 <tr><td>2026-02-21 09:44</td><td>supervisor@summit.ph</td><td>Supervisor</td><td>Rejected OT request — Ben Lim (no coverage)</td><td><span class="badge badge-yellow">Logged</span></td></tr>
               </tbody>
@@ -2484,7 +2483,7 @@
       <!-- SA: Generate Comprehensive Reports -->
       <div class="rscreen" id="rs-sa-reports">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">📊 Generate Comprehensive Reports</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Calculate & compile hospital-wide reports</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">📊 Generate Comprehensive Reports</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Calculate & compile clinic-wide PT reports</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sa-dashboard')">← Back to Menu</button>
         </div>
         <div class="card" style="max-width:600px;margin-bottom:20px">
@@ -2492,7 +2491,7 @@
           <div class="g2" style="gap:12px">
             <div class="field"><label>Report Type</label>
               <select class="select" id="sa-rpt-type">
-                <option>Financial Report</option><option>Clinical Statistics</option><option>Staffing Analysis</option><option>Performance Metrics</option><option>Full Hospital Report</option>
+                <option>Financial Report</option><option>PT Session Statistics</option><option>Staffing Analysis</option><option>Performance Metrics</option><option>Full PT Clinic Report</option>
               </select>
             </div>
             <div class="field"><label>Period</label>
@@ -2502,8 +2501,8 @@
             </div>
           </div>
           <div class="g2" style="gap:12px;margin-top:4px">
-            <div class="field"><label>Department</label>
-              <select class="select"><option>All Departments</option><option>General Medicine</option><option>Nursing</option><option>Physical Therapy</option><option>ICU</option><option>Emergency</option></select>
+            <div class="field"><label>PT Service</label>
+              <select class="select"><option>All PT Services</option><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Admin</option></select>
             </div>
             <div class="field"><label>Format</label>
               <select class="select"><option>On-Screen Display</option><option>PDF Export</option><option>Excel Export</option></select>
@@ -2522,7 +2521,7 @@
           </div>
           <div class="card">
             <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px">
-              <div class="card-title" style="margin:0">Full Hospital Report — February 2026</div>
+              <div class="card-title" style="margin:0">Full PT Clinic Report — February 2026</div>
               <div style="display:flex;gap:8px"><button class="btn btn-outline btn-sm">📥 Export PDF</button><button class="btn btn-outline btn-sm">📊 Export Excel</button></div>
             </div>
             <div style="overflow-x:auto"><table>
@@ -2531,7 +2530,7 @@
                 <tr><td>Financial</td><td>Total Revenue</td><td>₱2,800,000</td><td>₱2,592,000</td><td style="color:var(--ok)">↑ 8.0%</td></tr>
                 <tr><td>Financial</td><td>Total Expenses</td><td>₱1,900,000</td><td>₱1,938,000</td><td style="color:var(--ok)">↓ 2.0%</td></tr>
                 <tr><td>Clinical</td><td>Total Patient Visits</td><td>3,714</td><td>3,482</td><td style="color:var(--ok)">↑ 6.7%</td></tr>
-                <tr><td>Clinical</td><td>Avg. Bed Occupancy</td><td>72%</td><td>68%</td><td style="color:var(--ok)">↑ 4pp</td></tr>
+                <tr><td>Clinical</td><td>Avg. Room Utilization</td><td>75%</td><td>70%</td><td style="color:var(--ok)">↑ 5pp</td></tr>
                 <tr><td>Staffing</td><td>Avg. Attendance Rate</td><td>84.6%</td><td>82.1%</td><td style="color:var(--ok)">↑ 2.5pp</td></tr>
                 <tr><td>Staffing</td><td>Total OT Hours</td><td>126</td><td>107</td><td style="color:var(--danger)">↑ 17.8%</td></tr>
                 <tr><td>Performance</td><td>Avg. Patient Rating</td><td>4.7</td><td>4.5</td><td style="color:var(--ok)">↑ 0.2</td></tr>
@@ -2544,10 +2543,10 @@
       <!-- SA: Manage Hospital System -->
       <div class="rscreen" id="rs-sa-system">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">⚙️ Manage Hospital System</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Full system control panel — users, settings, permissions, configuration</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">⚙️ Manage Clinic System</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Full system control panel — users, settings, permissions, configuration</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sa-dashboard')">← Back to Menu</button>
         </div>
-        <div class="alert alert-blue" style="margin-bottom:18px"><span>🔐</span><div>All system changes are logged in the audit trail. Actions here affect all users and departments.</div></div>
+        <div class="alert alert-blue" style="margin-bottom:18px"><span>🔐</span><div>All system changes are logged in the audit trail. Actions here affect all users and PT services.</div></div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
           <div class="tab active" onclick="swtab('sa-sys-tabs','ss-users',this)">👥 All Users</div>
           <div class="tab" onclick="swtab('sa-sys-tabs','ss-permissions',this)">🔒 Permissions</div>
@@ -2564,7 +2563,7 @@
           <div class="card"><div style="overflow-x:auto"><table>
             <thead><tr><th>Employee ID</th><th>Name</th><th>Role</th><th>Email</th><th>Last Login</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
-              <tr><td>ADM-001</td><td>Juan Reyes</td><td><span class="badge badge-green">HR Admin</span></td><td>hradmin@summit.ph</td><td>Feb 22, 08:14</td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-danger">Disable</button></div></td></tr>
+                <tr><td>ADM-001</td><td>Juan Reyes</td><td><span class="badge badge-green">HR Admin</span></td><td>hradmin@summit.ph</td><td>Feb 22, 08:14</td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-danger">Disable</button></div></td></tr>
               <tr><td>ADM-002</td><td>Maria Cruz</td><td><span class="badge badge-purple">Supervisor</span></td><td>supervisor@summit.ph</td><td>Feb 22, 07:55</td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-danger">Disable</button></div></td></tr>
               <tr><td>ADM-003</td><td>Rosa Santos</td><td><span class="badge badge-yellow">Manager</span></td><td>manager@summit.ph</td><td>Feb 22, 08:30</td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-danger">Disable</button></div></td></tr>
               <tr><td>ADM-004</td><td>Ben Lim</td><td><span class="badge badge-blue">Super Admin</span></td><td>superadmin@summit.ph</td><td>Feb 22, 09:01</td><td><span class="badge badge-green">Active</span></td><td><div style="display:flex;gap:6px"><button class="btn btn-sm btn-outline">Edit</button><button class="btn btn-sm btn-danger">Disable</button></div></td></tr>
@@ -2581,10 +2580,10 @@
                 <tr><td>Manage Staff Accounts</td><td>✅</td><td>—</td><td>—</td><td>✅</td></tr>
                 <tr><td>View Staff Attendance</td><td>—</td><td>✅</td><td>✅</td><td>✅</td></tr>
                 <tr><td>Approve Staff Requests</td><td>—</td><td>✅</td><td>—</td><td>✅</td></tr>
-                <tr><td>View Medical Summaries</td><td>—</td><td>—</td><td>✅</td><td>✅</td></tr>
-                <tr><td>Approve Medical Reports</td><td>—</td><td>—</td><td>✅</td><td>✅</td></tr>
-                <tr><td>View All Hospital Data</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
-                <tr><td>Generate Hospital Reports</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
+                <tr><td>View PT Summaries</td><td>—</td><td>—</td><td>✅</td><td>✅</td></tr>
+                <tr><td>Approve PT Reports</td><td>—</td><td>—</td><td>✅</td><td>✅</td></tr>
+                <tr><td>View All Clinic Data</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
+                <tr><td>Generate Clinic Reports</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
                 <tr><td>Manage System</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
                 <tr><td>Approve All Requests</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
               </tbody>
@@ -2596,7 +2595,7 @@
         <div id="ss-settings" class="tab-panel hidden">
           <div class="card" style="max-width:560px">
             <div class="card-title">General Settings</div>
-            <div class="field"><label>Hospital Name</label><input class="input" value="SUMMIT PT CLINIC"/></div>
+            <div class="field"><label>Clinic Name</label><input class="input" value="SUMMIT PT CLINIC"/></div>
             <div class="field"><label>System Timezone</label><select class="select"><option>Asia/Manila (UTC+8)</option><option>UTC</option></select></div>
             <div class="field"><label>Payroll Cut-Off Dates</label><input class="input" value="15th and 30th of each month"/></div>
             <div class="field"><label>Session Timeout (minutes)</label><input class="input" type="number" value="30"/></div>
@@ -2635,7 +2634,7 @@
       <!-- SA: Review All Pending Requests -->
       <div class="rscreen" id="rs-sa-requests">
         <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px;margin-bottom:20px">
-          <div><h2 style="font-size:20px;font-weight:700">✅ Review All Pending Requests</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">All system requests — all roles &amp; departments</p></div>
+          <div><h2 style="font-size:20px;font-weight:700">✅ Review All Pending Requests</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">All system requests — all roles &amp; PT services</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sa-dashboard')">← Back to Menu</button>
         </div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
@@ -2649,7 +2648,7 @@
         <div id="sar-leave" class="tab-panel">
           <div class="req-item" id="sa-l1">
             <div class="avatar" style="background:#3b82f6;width:38px;height:38px;font-size:12px;flex-shrink:0">MC</div>
-            <div class="req-body"><div class="req-name">Maria Cruz &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Sick Leave · Feb 25–27 (3 days) · Dept: Nursing</div></div>
+            <div class="req-body"><div class="req-name">Maria Cruz &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Sick Leave · Feb 25–27 (3 days) · Service: Manual Therapy</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-l1','Maria Cruz','Leave')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-l1','Maria Cruz')">❌</button>
@@ -2657,7 +2656,7 @@
           </div>
           <div class="req-item" id="sa-l2">
             <div class="avatar" style="background:#7c3aed;width:38px;height:38px;font-size:12px;flex-shrink:0">RS</div>
-            <div class="req-body"><div class="req-name">Rosa Santos &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Vacation · Mar 3–5 (3 days) · Dept: Admin</div></div>
+            <div class="req-body"><div class="req-name">Rosa Santos &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Vacation · Mar 3–5 (3 days) · Service: Admin</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-l2','Rosa Santos','Leave')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-l2','Rosa Santos')">❌</button>
@@ -2665,7 +2664,7 @@
           </div>
           <div class="req-item" id="sa-l3">
             <div class="avatar" style="background:#f59e0b;width:38px;height:38px;font-size:12px;flex-shrink:0">BL</div>
-            <div class="req-body"><div class="req-name">Ben Lim &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Emergency Leave · Feb 23 (1 day) · Dept: Physical Therapy</div></div>
+            <div class="req-body"><div class="req-name">Ben Lim &nbsp;<span class="badge badge-blue">Leave</span></div><div class="req-meta">Emergency Leave · Feb 23 (1 day) · Service: Manual Therapy</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-l3','Ben Lim','Leave')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-l3','Ben Lim')">❌</button>
@@ -2676,15 +2675,15 @@
         <div id="sar-ot" class="tab-panel hidden">
           <div class="req-item" id="sa-o1">
             <div class="avatar" style="background:#1d4ed8;width:38px;height:38px;font-size:12px;flex-shrink:0">JR</div>
-            <div class="req-body"><div class="req-name">Dr. Juan Reyes &nbsp;<span class="badge badge-yellow">OT</span></div><div class="req-meta">4 OT hours · Feb 22 17:00–22:00 · Dept: General Medicine</div></div>
+            <div class="req-body"><div class="req-name">PT Marco Santos &nbsp;<span class="badge badge-yellow">OT</span></div><div class="req-meta">4 OT hours · Feb 22 17:00–22:00 · Service: Manual Therapy</div></div>
             <div class="req-actions">
-              <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-o1','Dr. Juan Reyes','OT')">✅</button>
-              <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-o1','Dr. Juan Reyes')">❌</button>
+              <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-o1','PT Marco Santos','OT')">✅</button>
+              <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-o1','PT Marco Santos')">❌</button>
             </div>
           </div>
           <div class="req-item" id="sa-o2">
             <div class="avatar" style="background:#10b981;width:38px;height:38px;font-size:12px;flex-shrink:0">MC</div>
-            <div class="req-body"><div class="req-name">Maria Cruz &nbsp;<span class="badge badge-yellow">OT</span></div><div class="req-meta">3 OT hours · Feb 23 15:00–18:00 · Dept: Nursing</div></div>
+            <div class="req-body"><div class="req-name">Maria Cruz &nbsp;<span class="badge badge-yellow">OT</span></div><div class="req-meta">3 OT hours · Feb 23 15:00–18:00 · Service: Manual Therapy</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-o2','Maria Cruz','OT')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-o2','Maria Cruz')">❌</button>
@@ -2695,7 +2694,7 @@
         <div id="sar-rptapproval" class="tab-panel hidden">
           <div class="req-item" id="sa-r1">
             <div style="font-size:28px;flex-shrink:0">📄</div>
-            <div class="req-body"><div class="req-name">Patient Discharge Summary — Feb 20 &nbsp;<span class="badge badge-yellow">Pending</span></div><div class="req-meta">Submitted by: Dr. Juan Reyes · General Medicine</div></div>
+            <div class="req-body"><div class="req-name">Patient Discharge Summary — Feb 20 &nbsp;<span class="badge badge-yellow">Pending</span></div><div class="req-meta">Submitted by: PT Marco Santos · Manual Therapy</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-r1','Discharge Summary','Report Approval')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-r1','Discharge Summary')">❌</button>
@@ -2703,7 +2702,7 @@
           </div>
           <div class="req-item" id="sa-r2">
             <div style="font-size:28px;flex-shrink:0">📄</div>
-            <div class="req-body"><div class="req-name">Monthly Clinical Outcomes — Jan 2026 &nbsp;<span class="badge badge-yellow">Pending</span></div><div class="req-meta">Submitted by: Dr. Lena Torres · Rehabilitation</div></div>
+            <div class="req-body"><div class="req-name">Monthly PT Outcomes — Jan 2026 &nbsp;<span class="badge badge-yellow">Pending</span></div><div class="req-meta">Submitted by: PT Maria Lena · Post-Surgical Rehab</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-r2','Clinical Outcomes Report','Report Approval')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-r2','Clinical Outcomes Report')">❌</button>
@@ -2722,7 +2721,7 @@
           </div>
           <div class="req-item" id="sa-sc2">
             <div style="font-size:28px;flex-shrink:0">⚙️</div>
-            <div class="req-body"><div class="req-name">New User Account Request &nbsp;<span class="badge badge-purple">System</span></div><div class="req-meta">Requested by: HR Admin · New HR Admin user for Dr. Cara Tan</div></div>
+            <div class="req-body"><div class="req-name">New User Account Request &nbsp;<span class="badge badge-purple">System</span></div><div class="req-meta">Requested by: HR Admin · New HR Admin user for PT Kevin Park</div></div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="saApproveReq('sa-sc2','New User Account','System Change')">✅</button>
               <button class="btn btn-danger btn-sm" onclick="openSAReject('sa-sc2','New User Account')">❌</button>
@@ -2748,9 +2747,9 @@
           <div><h2 style="font-size:20px;font-weight:700">📝 Review All Pending Reports</h2><p style="color:var(--muted);font-size:13px;margin-top:3px">Final approval — digital signature + archive</p></div>
           <button class="btn btn-outline btn-sm" onclick="showRS('sa-dashboard')">← Back to Menu</button>
         </div>
-        <div class="alert alert-blue" style="margin-bottom:18px"><span>✍️</span><div>Your digital signature constitutes the <strong>final approval</strong>. Approved reports are archived in the hospital database and submitters are notified.</div></div>
+        <div class="alert alert-blue" style="margin-bottom:18px"><span>✍️</span><div>Your digital signature constitutes the <strong>final approval</strong>. Approved reports are archived in the clinic database and submitters are notified.</div></div>
         <div style="display:flex;gap:0;border-bottom:2px solid var(--border2);margin-bottom:18px;overflow-x:auto">
-          <div class="tab active" onclick="swtab('sa-rpt-tabs','spr-medical',this)">Medical Reports <span class="badge badge-red" style="margin-left:4px">4</span></div>
+          <div class="tab active" onclick="swtab('sa-rpt-tabs','spr-medical',this)">PT Reports <span class="badge badge-red" style="margin-left:4px">4</span></div>
           <div class="tab" onclick="swtab('sa-rpt-tabs','spr-financial',this)">Financial Reports <span class="badge badge-yellow" style="margin-left:4px">2</span></div>
           <div class="tab" onclick="swtab('sa-rpt-tabs','spr-audit',this)">Audit Reports <span class="badge badge-blue" style="margin-left:4px">2</span></div>
           <div class="tab" onclick="swtab('sa-rpt-tabs','spr-archived',this)">Archived</div>
@@ -2761,7 +2760,7 @@
             <div style="font-size:30px;flex-shrink:0">📋</div>
             <div class="req-body">
               <div class="req-name">Patient Discharge Summary — Feb 20 &nbsp;<span class="badge badge-yellow">Pending Final Approval</span></div>
-              <div class="req-meta">Submitted: Dr. Juan Reyes · Manager Pre-Approved: ✅ Feb 22, 2026</div>
+              <div class="req-meta">Submitted: PT Marco Santos · Manager Pre-Approved: ✅ Feb 22, 2026</div>
             </div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="openFinalApprove('sa-rpt-m1','Patient Discharge Summary')">✍️ Sign &amp; Approve</button>
@@ -2770,18 +2769,18 @@
           <div class="req-item" id="sa-rpt-m2">
             <div style="font-size:30px;flex-shrink:0">📋</div>
             <div class="req-body">
-              <div class="req-name">ICU Patient Status Report — Feb 22 &nbsp;<span class="badge badge-red">Urgent</span></div>
-              <div class="req-meta">Submitted: ICU Head Nurse · Awaiting Manager review</div>
+              <div class="req-name">Neurological PT Patient Status Report — Feb 22 &nbsp;<span class="badge badge-red">Urgent</span></div>
+              <div class="req-meta">Submitted: PT Tom Reyes · Awaiting Manager review</div>
             </div>
             <div class="req-actions">
-              <button class="btn btn-ok btn-sm" onclick="openFinalApprove('sa-rpt-m2','ICU Patient Status Report')">✍️ Sign &amp; Approve</button>
+              <button class="btn btn-ok btn-sm" onclick="openFinalApprove('sa-rpt-m2','Neurological PT Patient Status Report')">✍️ Sign &amp; Approve</button>
             </div>
           </div>
           <div class="req-item" id="sa-rpt-m3">
             <div style="font-size:30px;flex-shrink:0">📋</div>
             <div class="req-body">
               <div class="req-name">Monthly Clinical Outcomes — Jan 2026 &nbsp;<span class="badge badge-yellow">Pending Final Approval</span></div>
-              <div class="req-meta">Submitted: Dr. Lena Torres · Manager Pre-Approved: ✅ Feb 18, 2026</div>
+              <div class="req-meta">Submitted: PT Maria Lena · Manager Pre-Approved: ✅ Feb 18, 2026</div>
             </div>
             <div class="req-actions">
               <button class="btn btn-ok btn-sm" onclick="openFinalApprove('sa-rpt-m3','Monthly Clinical Outcomes')">✍️ Sign &amp; Approve</button>
@@ -2856,7 +2855,7 @@
 <!-- Register Staff Modal -->
 <div class="modal-overlay2" id="m-register">
   <div class="modal2">
-    <div class="modal2-title">➕ Register New Medical Staff</div>
+    <div class="modal2-title">➕ Register New PT Staff</div>
     <div class="alert alert-blue" style="margin-bottom:16px;font-size:12px"><span>ℹ️</span><div>All entries are logged. Staff will receive login credentials via email.</div></div>
     <div class="grid-2" style="gap:12px">
       <div class="field"><label>First Name *</label><input class="input" id="reg-fn" placeholder="First name"/></div>
@@ -2868,13 +2867,13 @@
     </div>
     <div class="grid-2" style="gap:12px">
       <div class="field"><label>Credentials</label><input class="input" id="reg-cred" placeholder="e.g. MD, FPCP"/></div>
-      <div class="field"><label>Department *</label>
-        <select class="select" id="reg-dept"><option>General Medicine</option><option>Nursing</option><option>Physical Therapy</option><option>Admin</option><option>ICU</option><option>Emergency</option></select>
+      <div class="field"><label>PT Service *</label>
+        <select class="select" id="reg-dept"><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option><option>Pediatric PT</option><option>Admin</option></select>
       </div>
     </div>
     <div class="grid-2" style="gap:12px">
       <div class="field"><label>Role *</label>
-        <select class="select" id="reg-role"><option>Senior Doctor</option><option>Doctor</option><option>Head Nurse</option><option>Nurse</option><option>Physical Therapist</option><option>Admin Officer</option></select>
+        <select class="select" id="reg-role"><option>Senior Therapist</option><option>Therapist</option><option>PT Aide</option><option>Rehab Technician</option><option>Front Desk</option><option>Admin Officer</option></select>
       </div>
       <div class="field"><label>Status</label>
         <select class="select" id="reg-status"><option>Active</option><option>Inactive</option></select>
@@ -2892,7 +2891,7 @@
   <div class="modal2">
     <div class="modal2-title">✏️ Edit Staff &amp; Update Status</div>
     <div class="alert" style="background:#fef9c3;border:1px solid #fde047;color:#78350f;font-size:12px;margin-bottom:16px"><span>📋</span><div>This action will be logged in the audit trail. Staff will be notified of any status changes.</div></div>
-    <div class="field"><label>Staff Name</label><input class="input" value="S-001 — Dr. Juan Reyes" readonly style="background:var(--bg)"/></div>
+    <div class="field"><label>Staff Name</label><input class="input" value="S-001 — PT Marco Santos" readonly style="background:var(--bg)"/></div>
     <div class="field"><label>Account Status</label>
       <select class="select" id="edit-status"><option>Active</option><option>Inactive</option></select>
     </div>
@@ -3008,11 +3007,11 @@
         <div class="field"><label>Blood Group</label><select class="select"><option>A+</option><option>A-</option><option>B+</option><option>B-</option><option>O+</option><option>O-</option><option>AB+</option><option>AB-</option></select></div>
         <div class="field"><label>Allergies</label><input class="input" placeholder="e.g. Penicillin" /></div>
       </div>
-      <div class="field"><label>Admission Type</label>
-        <select class="select"><option>OPD (Outpatient)</option><option>IPD (Inpatient)</option><option>Emergency</option></select>
+      <div class="field"><label>Session Type</label>
+        <select class="select"><option>Initial Evaluation</option><option>Follow-up Session</option><option>Re-assessment</option><option>Discharge Assessment</option></select>
       </div>
-      <div class="field"><label>Assigned Doctor</label>
-        <select class="select"><option>Dr. Patel – Cardiology</option><option>Dr. Chen – Neurology</option><option>Dr. Lena – Ortho</option><option>Dr. Smith – Paediatrics</option></select>
+      <div class="field"><label>Assigned Therapist</label>
+        <select class="select"><option>PT Santos – Manual Therapy</option><option>PT Cruz – Sports Rehab</option><option>PT Lena – Post-Surgical Rehab</option><option>PT Reyes – Neurological PT</option><option>PT Wong – Orthopaedic PT</option><option>PT Park – Pediatric PT</option></select>
       </div>
     </div>
     <div class="modal-footer">
@@ -3031,11 +3030,11 @@
     </div>
     <div class="modal-body">
       <div class="field"><label>Patient</label><input class="input" placeholder="Search by name or patient ID…" /></div>
-      <div class="field"><label>Department</label>
-        <select class="select"><option>Cardiology</option><option>Neurology</option><option>Orthopaedics</option><option>Paediatrics</option><option>Emergency</option><option>General Medicine</option></select>
+      <div class="field"><label>PT Service</label>
+        <select class="select"><option>Manual Therapy</option><option>Sports Rehab</option><option>Post-Surgical Rehab</option><option>Neurological PT</option><option>Orthopaedic PT</option><option>Pediatric PT</option></select>
       </div>
-      <div class="field"><label>Doctor</label>
-        <select class="select"><option>Dr. Patel</option><option>Dr. Chen</option><option>Dr. Lena</option><option>Dr. Smith</option></select>
+      <div class="field"><label>Therapist</label>
+        <select class="select"><option>PT Santos</option><option>PT Cruz</option><option>PT Lena</option><option>PT Reyes</option><option>PT Wong</option><option>PT Park</option></select>
       </div>
       <div class="grid-2" style="gap:12px;">
         <div class="field"><label>Date</label><input class="input" type="date" /></div>
@@ -3068,10 +3067,10 @@ const ROLE_CONFIG = {
     portalLabel: 'HR Admin Portal',
     defaultScreen: 'hr-dashboard',
     nav: [
-      { section: 'Hospital HR Admin Menu' },
+      { section: 'PT Clinic HR Admin Menu' },
       { icon: '🏠', label: 'Dashboard',                 screen: 'hr-dashboard' },
-      { icon: '💰', label: 'Generate Medical Payroll',  screen: 'hr-payroll'   },
-      { icon: '👥', label: 'Medical Staff Management',  screen: 'hr-staff'     }
+      { icon: '💰', label: 'Generate PT Payroll',       screen: 'hr-payroll'   },
+      { icon: '👥', label: 'PT Staff Management',     screen: 'hr-staff'     }
     ]
   },
   supervisor: {
@@ -3093,8 +3092,8 @@ const ROLE_CONFIG = {
       { section: 'Clinic Manager Menu' },
       { icon: '🏠', label: 'Dashboard',                screen: 'mgr-dashboard'  },
       { icon: '🗓️', label: 'View Staff Attendance',    screen: 'mgr-attendance' },
-      { icon: '📋', label: 'View Medical Summaries',   screen: 'mgr-summaries'  },
-      { icon: '📝', label: 'Review Medical Reports',   screen: 'mgr-reports', badge: '7' }
+      { icon: '📋', label: 'View PT Summaries',   screen: 'mgr-summaries'  },
+      { icon: '📝', label: 'Review PT Reports',   screen: 'mgr-reports', badge: '7' }
     ]
   },
   superadmin: {
@@ -3102,11 +3101,11 @@ const ROLE_CONFIG = {
     portalLabel: 'Super Admin Portal',
     defaultScreen: 'sa-dashboard',
     nav: [
-      { section: 'Hospital Super Admin Menu' },
+      { section: 'PT Clinic Super Admin Menu' },
       { icon: '🏠', label: 'Dashboard',                  screen: 'sa-dashboard'         },
-      { icon: '🏥', label: 'View All Hospital Data',     screen: 'sa-hospital-data'     },
-      { icon: '📊', label: 'Generate Hospital Reports',  screen: 'sa-reports'           },
-      { icon: '⚙️', label: 'Manage Hospital System',    screen: 'sa-system'            },
+      { icon: '🏥', label: 'View All Clinic Data',       screen: 'sa-hospital-data'     },
+      { icon: '📊', label: 'Generate Clinic Reports',    screen: 'sa-reports'           },
+      { icon: '⚙️', label: 'Manage Clinic System',      screen: 'sa-system'            },
       { icon: '✅', label: 'Review All Requests',         screen: 'sa-requests',         badge: '15' },
       { icon: '📝', label: 'Review All Reports',          screen: 'sa-pending-reports',  badge: '8'  }
     ]
@@ -3251,10 +3250,10 @@ function goStep(n) {
 }
 
 const _PAY = {
-  a: { name: 'Dr. Juan Reyes', reg: 25000, ot: 2400,  oncall: 800,  ded: 3200 },
-  b: { name: 'Maria Cruz',     reg: 18000, ot: 4800,  oncall: 1600, ded: 2880 },
-  c: { name: 'Rosa Santos',    reg: 16000, ot: 0,     oncall: 0,    ded: 2560 },
-  d: { name: 'Ben Lim',        reg: 20000, ot: 0,     oncall: 800,  ded: 3200 }
+  a: { name: 'PT Marco Santos', reg: 25000, ot: 2400,  oncall: 0,  ded: 3200 },
+  b: { name: 'PT Jamie Cruz',  reg: 22000, ot: 0,     oncall: 0,    ded: 2880 },
+  c: { name: 'Clara Hassan',   reg: 16000, ot: 0,     oncall: 0,    ded: 2560 },
+  d: { name: 'Angela Turner',  reg: 18000, ot: 0,     oncall: 0,    ded: 2880 }
 };
 
 function calcPay(key) {
